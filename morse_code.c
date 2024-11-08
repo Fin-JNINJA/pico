@@ -49,7 +49,7 @@ uint8_t valueArray[] = {
 
 char morseCode[26][4] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
-char alphabet[26][1] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
 
 // --------------------------------------------------------------------
@@ -131,10 +131,10 @@ void checkTimeout() {
 }
 
 int decoder() {
-	for(int i = 0; i < sizeof(morseCode); i++) {
-		printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode));
+	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
+		printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode) / 4);
 		if(strcmp(morseCode[i], morse) == 0 && notPressed < 401) {
-			printf("%s %s %s\n", alphabet[i], i, "345");
+			printf("%s %s\n", alphabet[i], morseCode[i]);
 			return i;
 		}
 	}
