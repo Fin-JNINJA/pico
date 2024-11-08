@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /user/HS400/fj00250/Downloads/cw1031
+CMAKE_SOURCE_DIR = "/user/HS400/fj00250/Documents/Place to clone repositories/pico"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /user/HS400/fj00250/Downloads/cw1031/build
+CMAKE_BINARY_DIR = "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/HS400/fj00250/Downloads/cw1031/build/CMakeFiles /user/HS400/fj00250/Downloads/cw1031/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/CMakeFiles" "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/HS400/fj00250/Downloads/cw1031/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cw1031
+# Target rules for targets named pico
 
 # Build rule for target.
-cw1031: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cw1031
-.PHONY : cw1031
+pico: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico
+.PHONY : pico
 
 # fast build rule for target.
-cw1031/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/build
-.PHONY : cw1031/fast
+pico/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/build
+.PHONY : pico/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -199,7 +199,7 @@ morse_code.obj: morse_code.c.obj
 
 # target to build an object file
 morse_code.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/morse_code.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/morse_code.c.obj
 .PHONY : morse_code.c.obj
 
 morse_code.i: morse_code.c.i
@@ -207,7 +207,7 @@ morse_code.i: morse_code.c.i
 
 # target to preprocess a source file
 morse_code.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/morse_code.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/morse_code.c.i
 .PHONY : morse_code.c.i
 
 morse_code.s: morse_code.c.s
@@ -215,7 +215,7 @@ morse_code.s: morse_code.c.s
 
 # target to generate assembly for a file
 morse_code.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/morse_code.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/morse_code.c.s
 .PHONY : morse_code.c.s
 
 opt/pico-sdk/src/common/hardware_claim/claim.obj: opt/pico-sdk/src/common/hardware_claim/claim.c.obj
@@ -223,7 +223,7 @@ opt/pico-sdk/src/common/hardware_claim/claim.obj: opt/pico-sdk/src/common/hardwa
 
 # target to build an object file
 opt/pico-sdk/src/common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.obj
 .PHONY : opt/pico-sdk/src/common/hardware_claim/claim.c.obj
 
 opt/pico-sdk/src/common/hardware_claim/claim.i: opt/pico-sdk/src/common/hardware_claim/claim.c.i
@@ -231,7 +231,7 @@ opt/pico-sdk/src/common/hardware_claim/claim.i: opt/pico-sdk/src/common/hardware
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : opt/pico-sdk/src/common/hardware_claim/claim.c.i
 
 opt/pico-sdk/src/common/hardware_claim/claim.s: opt/pico-sdk/src/common/hardware_claim/claim.c.s
@@ -239,7 +239,7 @@ opt/pico-sdk/src/common/hardware_claim/claim.s: opt/pico-sdk/src/common/hardware
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : opt/pico-sdk/src/common/hardware_claim/claim.c.s
 
 opt/pico-sdk/src/common/pico_sync/critical_section.obj: opt/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -247,7 +247,7 @@ opt/pico-sdk/src/common/pico_sync/critical_section.obj: opt/pico-sdk/src/common/
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 opt/pico-sdk/src/common/pico_sync/critical_section.i: opt/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -255,7 +255,7 @@ opt/pico-sdk/src/common/pico_sync/critical_section.i: opt/pico-sdk/src/common/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : opt/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 opt/pico-sdk/src/common/pico_sync/critical_section.s: opt/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -263,7 +263,7 @@ opt/pico-sdk/src/common/pico_sync/critical_section.s: opt/pico-sdk/src/common/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : opt/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 opt/pico-sdk/src/common/pico_sync/lock_core.obj: opt/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -271,7 +271,7 @@ opt/pico-sdk/src/common/pico_sync/lock_core.obj: opt/pico-sdk/src/common/pico_sy
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 opt/pico-sdk/src/common/pico_sync/lock_core.i: opt/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -279,7 +279,7 @@ opt/pico-sdk/src/common/pico_sync/lock_core.i: opt/pico-sdk/src/common/pico_sync
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : opt/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 opt/pico-sdk/src/common/pico_sync/lock_core.s: opt/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -287,7 +287,7 @@ opt/pico-sdk/src/common/pico_sync/lock_core.s: opt/pico-sdk/src/common/pico_sync
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : opt/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 opt/pico-sdk/src/common/pico_sync/mutex.obj: opt/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -295,7 +295,7 @@ opt/pico-sdk/src/common/pico_sync/mutex.obj: opt/pico-sdk/src/common/pico_sync/m
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 opt/pico-sdk/src/common/pico_sync/mutex.i: opt/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -303,7 +303,7 @@ opt/pico-sdk/src/common/pico_sync/mutex.i: opt/pico-sdk/src/common/pico_sync/mut
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : opt/pico-sdk/src/common/pico_sync/mutex.c.i
 
 opt/pico-sdk/src/common/pico_sync/mutex.s: opt/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -311,7 +311,7 @@ opt/pico-sdk/src/common/pico_sync/mutex.s: opt/pico-sdk/src/common/pico_sync/mut
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : opt/pico-sdk/src/common/pico_sync/mutex.c.s
 
 opt/pico-sdk/src/common/pico_sync/sem.obj: opt/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -319,7 +319,7 @@ opt/pico-sdk/src/common/pico_sync/sem.obj: opt/pico-sdk/src/common/pico_sync/sem
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_sync/sem.c.obj
 
 opt/pico-sdk/src/common/pico_sync/sem.i: opt/pico-sdk/src/common/pico_sync/sem.c.i
@@ -327,7 +327,7 @@ opt/pico-sdk/src/common/pico_sync/sem.i: opt/pico-sdk/src/common/pico_sync/sem.c
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : opt/pico-sdk/src/common/pico_sync/sem.c.i
 
 opt/pico-sdk/src/common/pico_sync/sem.s: opt/pico-sdk/src/common/pico_sync/sem.c.s
@@ -335,7 +335,7 @@ opt/pico-sdk/src/common/pico_sync/sem.s: opt/pico-sdk/src/common/pico_sync/sem.c
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : opt/pico-sdk/src/common/pico_sync/sem.c.s
 
 opt/pico-sdk/src/common/pico_time/time.obj: opt/pico-sdk/src/common/pico_time/time.c.obj
@@ -343,7 +343,7 @@ opt/pico-sdk/src/common/pico_time/time.obj: opt/pico-sdk/src/common/pico_time/ti
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_time/time.c.obj
 
 opt/pico-sdk/src/common/pico_time/time.i: opt/pico-sdk/src/common/pico_time/time.c.i
@@ -351,7 +351,7 @@ opt/pico-sdk/src/common/pico_time/time.i: opt/pico-sdk/src/common/pico_time/time
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : opt/pico-sdk/src/common/pico_time/time.c.i
 
 opt/pico-sdk/src/common/pico_time/time.s: opt/pico-sdk/src/common/pico_time/time.c.s
@@ -359,7 +359,7 @@ opt/pico-sdk/src/common/pico_time/time.s: opt/pico-sdk/src/common/pico_time/time
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : opt/pico-sdk/src/common/pico_time/time.c.s
 
 opt/pico-sdk/src/common/pico_time/timeout_helper.obj: opt/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -367,7 +367,7 @@ opt/pico-sdk/src/common/pico_time/timeout_helper.obj: opt/pico-sdk/src/common/pi
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 opt/pico-sdk/src/common/pico_time/timeout_helper.i: opt/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -375,7 +375,7 @@ opt/pico-sdk/src/common/pico_time/timeout_helper.i: opt/pico-sdk/src/common/pico
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : opt/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 opt/pico-sdk/src/common/pico_time/timeout_helper.s: opt/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -383,7 +383,7 @@ opt/pico-sdk/src/common/pico_time/timeout_helper.s: opt/pico-sdk/src/common/pico
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : opt/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 opt/pico-sdk/src/common/pico_util/datetime.obj: opt/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -391,7 +391,7 @@ opt/pico-sdk/src/common/pico_util/datetime.obj: opt/pico-sdk/src/common/pico_uti
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_util/datetime.c.obj
 
 opt/pico-sdk/src/common/pico_util/datetime.i: opt/pico-sdk/src/common/pico_util/datetime.c.i
@@ -399,7 +399,7 @@ opt/pico-sdk/src/common/pico_util/datetime.i: opt/pico-sdk/src/common/pico_util/
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : opt/pico-sdk/src/common/pico_util/datetime.c.i
 
 opt/pico-sdk/src/common/pico_util/datetime.s: opt/pico-sdk/src/common/pico_util/datetime.c.s
@@ -407,7 +407,7 @@ opt/pico-sdk/src/common/pico_util/datetime.s: opt/pico-sdk/src/common/pico_util/
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : opt/pico-sdk/src/common/pico_util/datetime.c.s
 
 opt/pico-sdk/src/common/pico_util/pheap.obj: opt/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -415,7 +415,7 @@ opt/pico-sdk/src/common/pico_util/pheap.obj: opt/pico-sdk/src/common/pico_util/p
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_util/pheap.c.obj
 
 opt/pico-sdk/src/common/pico_util/pheap.i: opt/pico-sdk/src/common/pico_util/pheap.c.i
@@ -423,7 +423,7 @@ opt/pico-sdk/src/common/pico_util/pheap.i: opt/pico-sdk/src/common/pico_util/phe
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : opt/pico-sdk/src/common/pico_util/pheap.c.i
 
 opt/pico-sdk/src/common/pico_util/pheap.s: opt/pico-sdk/src/common/pico_util/pheap.c.s
@@ -431,7 +431,7 @@ opt/pico-sdk/src/common/pico_util/pheap.s: opt/pico-sdk/src/common/pico_util/phe
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : opt/pico-sdk/src/common/pico_util/pheap.c.s
 
 opt/pico-sdk/src/common/pico_util/queue.obj: opt/pico-sdk/src/common/pico_util/queue.c.obj
@@ -439,7 +439,7 @@ opt/pico-sdk/src/common/pico_util/queue.obj: opt/pico-sdk/src/common/pico_util/q
 
 # target to build an object file
 opt/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : opt/pico-sdk/src/common/pico_util/queue.c.obj
 
 opt/pico-sdk/src/common/pico_util/queue.i: opt/pico-sdk/src/common/pico_util/queue.c.i
@@ -447,7 +447,7 @@ opt/pico-sdk/src/common/pico_util/queue.i: opt/pico-sdk/src/common/pico_util/que
 
 # target to preprocess a source file
 opt/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : opt/pico-sdk/src/common/pico_util/queue.c.i
 
 opt/pico-sdk/src/common/pico_util/queue.s: opt/pico-sdk/src/common/pico_util/queue.c.s
@@ -455,7 +455,7 @@ opt/pico-sdk/src/common/pico_util/queue.s: opt/pico-sdk/src/common/pico_util/que
 
 # target to generate assembly for a file
 opt/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : opt/pico-sdk/src/common/pico_util/queue.c.s
 
 opt/pico-sdk/src/rp2040/pico_platform/platform.obj: opt/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -463,7 +463,7 @@ opt/pico-sdk/src/rp2040/pico_platform/platform.obj: opt/pico-sdk/src/rp2040/pico
 
 # target to build an object file
 opt/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.obj
 .PHONY : opt/pico-sdk/src/rp2040/pico_platform/platform.c.obj
 
 opt/pico-sdk/src/rp2040/pico_platform/platform.i: opt/pico-sdk/src/rp2040/pico_platform/platform.c.i
@@ -471,7 +471,7 @@ opt/pico-sdk/src/rp2040/pico_platform/platform.i: opt/pico-sdk/src/rp2040/pico_p
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2040/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : opt/pico-sdk/src/rp2040/pico_platform/platform.c.i
 
 opt/pico-sdk/src/rp2040/pico_platform/platform.s: opt/pico-sdk/src/rp2040/pico_platform/platform.c.s
@@ -479,7 +479,7 @@ opt/pico-sdk/src/rp2040/pico_platform/platform.s: opt/pico-sdk/src/rp2040/pico_p
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2040/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : opt/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
@@ -487,7 +487,7 @@ opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: opt/pico-sdk/src/r
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
@@ -495,7 +495,7 @@ opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: opt/pico-sdk/src/rp2
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
@@ -503,7 +503,7 @@ opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: opt/pico-sdk/src/rp2
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -511,7 +511,7 @@ opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: opt/pico-sdk/src/rp2_com
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -519,7 +519,7 @@ opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: opt/pico-sdk/src/rp2_commo
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -527,7 +527,7 @@ opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: opt/pico-sdk/src/rp2_commo
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_divider/divider.obj: opt/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -535,7 +535,7 @@ opt/pico-sdk/src/rp2_common/hardware_divider/divider.obj: opt/pico-sdk/src/rp2_c
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -543,7 +543,7 @@ opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -551,7 +551,7 @@ opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: opt/pico-sdk/src/rp2_common/ha
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -559,7 +559,7 @@ opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: opt/pico-sdk/src/rp2_common/ha
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.obj: opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -567,7 +567,7 @@ opt/pico-sdk/src/rp2_common/hardware_irq/irq.obj: opt/pico-sdk/src/rp2_common/ha
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.i: opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -575,7 +575,7 @@ opt/pico-sdk/src/rp2_common/hardware_irq/irq.i: opt/pico-sdk/src/rp2_common/hard
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.s: opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -583,7 +583,7 @@ opt/pico-sdk/src/rp2_common/hardware_irq/irq.s: opt/pico-sdk/src/rp2_common/hard
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -591,7 +591,7 @@ opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: opt/pico-sdk/src
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.obj: opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -599,7 +599,7 @@ opt/pico-sdk/src/rp2_common/hardware_pll/pll.obj: opt/pico-sdk/src/rp2_common/ha
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.i: opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -607,7 +607,7 @@ opt/pico-sdk/src/rp2_common/hardware_pll/pll.i: opt/pico-sdk/src/rp2_common/hard
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.s: opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -615,7 +615,7 @@ opt/pico-sdk/src/rp2_common/hardware_pll/pll.s: opt/pico-sdk/src/rp2_common/hard
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.obj: opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -623,7 +623,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync/sync.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.i: opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -631,7 +631,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync/sync.i: opt/pico-sdk/src/rp2_common/ha
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.s: opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -639,7 +639,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync/sync.s: opt/pico-sdk/src/rp2_common/ha
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
@@ -647,7 +647,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: opt/pico
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
@@ -655,7 +655,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: opt/pico-s
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
@@ -663,7 +663,7 @@ opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: opt/pico-s
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
@@ -671,7 +671,7 @@ opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: opt/pico-sdk/src/rp2_commo
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
@@ -679,7 +679,7 @@ opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: opt/pico-sdk/src/rp2_common/
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
@@ -687,7 +687,7 @@ opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: opt/pico-sdk/src/rp2_common/
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.obj: opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -695,7 +695,7 @@ opt/pico-sdk/src/rp2_common/hardware_timer/timer.obj: opt/pico-sdk/src/rp2_commo
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.i: opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -703,7 +703,7 @@ opt/pico-sdk/src/rp2_common/hardware_timer/timer.i: opt/pico-sdk/src/rp2_common/
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.s: opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -711,7 +711,7 @@ opt/pico-sdk/src/rp2_common/hardware_timer/timer.s: opt/pico-sdk/src/rp2_common/
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.obj: opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -719,7 +719,7 @@ opt/pico-sdk/src/rp2_common/hardware_uart/uart.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.i: opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -727,7 +727,7 @@ opt/pico-sdk/src/rp2_common/hardware_uart/uart.i: opt/pico-sdk/src/rp2_common/ha
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.s: opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -735,7 +735,7 @@ opt/pico-sdk/src/rp2_common/hardware_uart/uart.s: opt/pico-sdk/src/rp2_common/ha
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -743,7 +743,7 @@ opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -751,7 +751,7 @@ opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: opt/pico-sdk/src/rp2_common/ha
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -759,7 +759,7 @@ opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: opt/pico-sdk/src/rp2_common/ha
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -767,7 +767,7 @@ opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: opt/pico-sdk/src/rp2
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -775,7 +775,7 @@ opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: opt/pico-sdk/src/rp2_c
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -783,7 +783,7 @@ opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: opt/pico-sdk/src/rp2_c
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -791,7 +791,7 @@ opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -799,7 +799,7 @@ opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: opt/pico-sdk/src/rp2_common/ha
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -807,7 +807,7 @@ opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: opt/pico-sdk/src/rp2_common/ha
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
@@ -815,7 +815,7 @@ opt/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.i: opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
@@ -823,7 +823,7 @@ opt/pico-sdk/src/rp2_common/pico_atomic/atomic.i: opt/pico-sdk/src/rp2_common/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.s: opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
@@ -831,7 +831,7 @@ opt/pico-sdk/src/rp2_common/pico_atomic/atomic.s: opt/pico-sdk/src/rp2_common/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
 opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -839,7 +839,7 @@ opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: opt/pico-sdk/src/rp2
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -847,7 +847,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: opt/pico-sdk/src/rp2_commo
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -855,7 +855,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: opt/pico-sdk/src/rp2_common/
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -863,7 +863,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: opt/pico-sdk/src/rp2_common/
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
@@ -871,7 +871,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: opt/pico-sdk/src/rp2_
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
@@ -879,7 +879,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: opt/pico-sdk/src/rp2_co
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
@@ -887,7 +887,7 @@ opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: opt/pico-sdk/src/rp2_co
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
@@ -895,7 +895,7 @@ opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: opt/pico-s
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
@@ -903,7 +903,7 @@ opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: opt/pico-sdk
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
@@ -911,7 +911,7 @@ opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: opt/pico-sdk
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
 opt/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: opt/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
@@ -919,7 +919,7 @@ opt/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: opt/pico-sdk/src/rp2_common/pico
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
@@ -927,7 +927,7 @@ opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: opt/pico-sdk/src/rp
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
 
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
@@ -935,7 +935,7 @@ opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: opt/pico-sdk/src/rp2_
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
@@ -943,7 +943,7 @@ opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: opt/pico-sdk/src/rp2_
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
 opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
@@ -951,7 +951,7 @@ opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: opt/pico-sdk/src/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
@@ -959,7 +959,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: opt/pico-sdk/sr
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
@@ -967,7 +967,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: opt/pico-sdk
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
@@ -975,7 +975,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: opt/pico-sdk/s
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
@@ -983,7 +983,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: opt/pico-sdk/s
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
 opt/pico-sdk/src/rp2_common/pico_double/double_math.obj: opt/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -991,7 +991,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_math.obj: opt/pico-sdk/src/rp2_co
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_double/double_math.i: opt/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -999,7 +999,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_math.i: opt/pico-sdk/src/rp2_comm
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 opt/pico-sdk/src/rp2_common/pico_double/double_math.s: opt/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1007,7 +1007,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_math.s: opt/pico-sdk/src/rp2_comm
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
@@ -1015,7 +1015,7 @@ opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: opt/pico-
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
@@ -1023,7 +1023,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: opt/pico-sdk/src/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
@@ -1031,7 +1031,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: opt/pico-sdk/s
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
@@ -1039,7 +1039,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: opt/pico-sdk/src
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
@@ -1047,7 +1047,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: opt/pico-sdk/src
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
 opt/pico-sdk/src/rp2_common/pico_float/float_math.obj: opt/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1055,7 +1055,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_math.obj: opt/pico-sdk/src/rp2_comm
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_float/float_math.i: opt/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1063,7 +1063,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_math.i: opt/pico-sdk/src/rp2_common
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 opt/pico-sdk/src/rp2_common/pico_float/float_math.s: opt/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1071,7 +1071,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_math.s: opt/pico-sdk/src/rp2_common
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
@@ -1079,7 +1079,7 @@ opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: opt/pico-sd
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1087,7 +1087,7 @@ opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: opt/pico-sd
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
@@ -1095,7 +1095,7 @@ opt/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.i: opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
@@ -1103,7 +1103,7 @@ opt/pico-sdk/src/rp2_common/pico_malloc/malloc.i: opt/pico-sdk/src/rp2_common/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.s: opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
@@ -1111,7 +1111,7 @@ opt/pico-sdk/src/rp2_common/pico_malloc/malloc.s: opt/pico-sdk/src/rp2_common/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
 opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1119,7 +1119,7 @@ opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: opt/pico-sdk/src/rp2
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
@@ -1127,7 +1127,7 @@ opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: opt/pico-sdk/src/rp2_
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
@@ -1135,7 +1135,7 @@ opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: opt/pico-sdk/src/rp2_co
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
@@ -1143,7 +1143,7 @@ opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: opt/pico-sdk/src/rp2_co
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
 opt/pico-sdk/src/rp2_common/pico_printf/printf.obj: opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1151,7 +1151,7 @@ opt/pico-sdk/src/rp2_common/pico_printf/printf.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_printf/printf.i: opt/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1159,7 +1159,7 @@ opt/pico-sdk/src/rp2_common/pico_printf/printf.i: opt/pico-sdk/src/rp2_common/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 opt/pico-sdk/src/rp2_common/pico_printf/printf.s: opt/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1167,7 +1167,7 @@ opt/pico-sdk/src/rp2_common/pico_printf/printf.s: opt/pico-sdk/src/rp2_common/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1175,7 +1175,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: opt/pico-sdk/src/rp2_commo
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.i: opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1183,7 +1183,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime/runtime.i: opt/pico-sdk/src/rp2_common/
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.s: opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1191,7 +1191,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime/runtime.s: opt/pico-sdk/src/rp2_common/
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
@@ -1199,7 +1199,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: opt/pico-sdk/src
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
@@ -1207,7 +1207,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: opt/pico-sdk/src/r
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
@@ -1215,7 +1215,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: opt/pico-sdk/src/r
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
@@ -1223,7 +1223,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: opt/pico-
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
@@ -1231,7 +1231,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: opt/pico-sd
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
@@ -1239,7 +1239,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: opt/pico-sd
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
@@ -1247,7 +1247,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: opt/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
@@ -1255,7 +1255,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: opt/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
@@ -1263,7 +1263,7 @@ opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: opt/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
@@ -1271,7 +1271,7 @@ opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: 
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
@@ -1279,7 +1279,7 @@ opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: op
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
@@ -1287,7 +1287,7 @@ opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: op
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1295,7 +1295,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: opt/pico-sdk/src/rp2_common/pi
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.i: opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1303,7 +1303,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio/stdio.i: opt/pico-sdk/src/rp2_common/pico
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.s: opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1311,7 +1311,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio/stdio.s: opt/pico-sdk/src/rp2_common/pico
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -1319,7 +1319,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: opt/pico-sdk/src/rp2
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -1327,7 +1327,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: opt/pico-sdk/src/rp2_c
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -1335,7 +1335,7 @@ opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: opt/pico-sdk/src/rp2_c
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1343,7 +1343,7 @@ opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: opt/pico-sdk/src/rp2_common/
 
 # target to build an object file
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1351,7 +1351,7 @@ opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: opt/pico-sdk/src/rp2_common/pi
 
 # target to preprocess a source file
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1359,7 +1359,7 @@ opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: opt/pico-sdk/src/rp2_common/pi
 
 # target to generate assembly for a file
 opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw1031.dir/build.make CMakeFiles/cw1031.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico.dir/build.make CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : opt/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 # Help Target
@@ -1375,7 +1375,7 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pioasmBuild"
 	@echo "... bs2_default"
-	@echo "... cw1031"
+	@echo "... pico"
 	@echo "... morse_code.obj"
 	@echo "... morse_code.i"
 	@echo "... morse_code.s"

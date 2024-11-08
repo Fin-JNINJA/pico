@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/user/HS400/fj00250/Downloads/cw1031/build/pico-sdk/src/rp2_common/pico_lwip/tools/cmake_install.cmake")
+  include("/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2_common/pico_lwip/tools/cmake_install.cmake")
 endif()
 

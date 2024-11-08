@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /user/HS400/fj00250/Downloads/cw1031/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb
