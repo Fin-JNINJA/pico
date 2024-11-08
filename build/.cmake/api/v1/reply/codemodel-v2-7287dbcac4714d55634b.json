@@ -1296,7 +1296,7 @@
 				{
 					"directoryIndex" : 20,
 					"id" : "bs2_default::@efaae0dfea37ab6992ce",
-					"jsonFile" : "target-bs2_default-Debug-f2257ec36745748d5434.json",
+					"jsonFile" : "target-bs2_default-Debug-db9e5bc6c3dffc0b066d.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},
@@ -1324,7 +1324,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "pico::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-pico-Debug-dc47bef180f8f629cb5b.json",
+					"jsonFile" : "target-pico-Debug-54c846fc8954b5e977bb.json",
 					"name" : "pico",
 					"projectIndex" : 0
 				},
@@ -1341,8 +1341,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build",
-		"source" : "/user/HS400/fj00250/Documents/Place to clone repositories/pico"
+		"build" : "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build",
+		"source" : "/user/HS400/dc01184/Documents/Coursework COM1031/pico"
 	},
 	"version" : 
 	{

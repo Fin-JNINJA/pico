@@ -21,9 +21,9 @@ CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  /usr/include/newlib/c++/10.3.1/cassert /usr/include/newlib/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/version.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/version.h \
  /opt/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/config_autogen.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/config_autogen.h \
  /opt/pico-sdk/src/boards/include/boards/pico.h \
  /opt/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /opt/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \

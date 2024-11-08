@@ -294,7 +294,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/generated/pico_base"
+					"path" : "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -804,7 +804,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/generated/pico_base"
+					"path" : "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -1297,7 +1297,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/generated/pico_base"
+					"path" : "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -2304,7 +2304,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "\"-Wl,-L/user/HS400/fj00250/Documents/Place to clone repositories/pico/build\"",
+				"fragment" : "\"-Wl,-L/user/HS400/dc01184/Documents/Coursework COM1031/pico/build\"",
 				"role" : "flags"
 			},
 			{

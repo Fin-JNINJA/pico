@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/user/HS400/fj00250/Documents/Place to clone repositories/pico"
+CMAKE_SOURCE_DIR = "/user/HS400/dc01184/Documents/Coursework COM1031/pico"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build"
+CMAKE_BINARY_DIR = "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build"
 
 # Utility rule file for bs2_default_bin.
 
@@ -69,8 +69,8 @@ include pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/progress.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 pico-sdk/src/rp2040/boot_stage2/bs2_default.bin: pico-sdk/src/rp2040/boot_stage2/bs2_default.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
-	cd "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2" && /usr/bin/arm-none-eabi-objcopy -Obinary "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.elf" "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
+	cd "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2" && /usr/bin/arm-none-eabi-objcopy -Obinary "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.elf" "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin"
 
 bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin
 bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
@@ -82,10 +82,10 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build: bs2_defaul
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
 
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
-	cd "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2" && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
+	cd "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2" && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean
 
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend:
-	cd "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/user/HS400/fj00250/Documents/Place to clone repositories/pico" /opt/pico-sdk/src/rp2040/boot_stage2 "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build" "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2" "/user/HS400/fj00250/Documents/Place to clone repositories/pico/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/user/HS400/dc01184/Documents/Coursework COM1031/pico" /opt/pico-sdk/src/rp2040/boot_stage2 "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build" "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2" "/user/HS400/dc01184/Documents/Coursework COM1031/pico/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 

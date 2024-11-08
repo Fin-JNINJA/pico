@@ -22,9 +22,9 @@ CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: \
  /opt/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /opt/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
  /usr/include/newlib/assert.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/version.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/version.h \
  /opt/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/config_autogen.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/config_autogen.h \
  /opt/pico-sdk/src/boards/include/boards/pico.h \
  /opt/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /opt/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \

@@ -11,9 +11,9 @@ CMakeFiles/pico.dir/opt/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: \
  /usr/include/newlib/sys/features.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/version.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/version.h \
  /opt/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
- /user/HS400/fj00250/Documents/Place\ to\ clone\ repositories/pico/build/generated/pico_base/pico/config_autogen.h \
+ /user/HS400/dc01184/Documents/Coursework\ COM1031/pico/build/generated/pico_base/pico/config_autogen.h \
  /opt/pico-sdk/src/boards/include/boards/pico.h \
  /opt/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /opt/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
