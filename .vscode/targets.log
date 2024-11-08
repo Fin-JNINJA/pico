@@ -1,0 +1,377 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Fri Nov  8 13:09:42 2024
+
+# Variables
+
+# environment
+FSLIBDIR = /opt/flowsolAIR/FSLibs/linux64
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+LMOD_FULL_SETTARG_SUPPORT = no
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = /user/HS400/fj00250
+# environment
+WINDOWPATH = 2
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+FSDEFS = /opt/flowsolAIR/app-defaults
+# environment
+MERCURY_EXE = undefined
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+PGPLOT_DIR = /opt/MESA15140/mesasdk/lib/pgplot
+# environment
+PVM_ARCH = LINUX64
+# environment
+FC_LICENSE_SERVER = rt-lic01.surrey.ac.uk:7285
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+picotool_DIR = /opt/picotool
+# environment
+PWD = /user/HS400/fj00250/Documents/Place to clone repositories/pico
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+NETKIT_HOME = /opt/netkit
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /user/HS400/fj00250/.config/Code/CachedData/384ff7382de624fb94dbaf6da11977bba1ecd427
+# environment
+LANG = C
+# environment
+OMP_NUM_THREADS = 4
+# environment
+XAUTHORITY = /run/user/339885/gdm/Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /user/HS400/fj00250/Documents/Place to clone repositories/pico
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LMOD_DIR = /usr/share/lmod/lmod/libexec
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/339885/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+ADDLIBPATH = /opt/flowsolAIR/FSLibs/linux64:/opt/flowsolAIR/SysLibs/linux64:/opt/flowsolAIR/CasLibs/linux64
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile
+MAKEFILE_LIST := 
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 58101
+# environment
+LMOD_COLORIZE = yes
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_339885_ULd6At
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+CASLIBDIR = /opt/flowsolAIR/CasLibs/linux64
+# environment
+FSDOCROOT = /opt/flowsolAIR/GHelp
+# environment
+SESSION_MANAGER = local/heron115.eps.surrey.ac.uk:@/tmp/.ICE-unix/51914,unix/heron115.eps.surrey.ac.uk:/tmp/.ICE-unix/51914
+# automatic
+*F = $(notdir $*)
+# environment
+MANPATH = /opt/MESA15140/mesasdk/share/man:/opt/openocd/share/man:/opt/MESA15140/mesasdk/share/man:/usr/share/lmod/lmod/share/man:/opt/MESA15140/mesasdk/share/man:/opt/netkit/man:/opt/MESA15140/mesasdk/share/man:/opt/netkit/man
+# environment
+NEWPAN2D_EXE = /opt/flowsolAIR/bin/linux64/newpan2d
+# environment
+MODULEPATH = /vol/hpc-software/modules/labs:/vol/hpc-software/modules/labs:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles/
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/339885/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+USNEWPAN_EXE = /opt/flowsolAIR/bin/linux64/usnewpan
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-gb","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+# environment
+MESA_DIR = /opt/MESA15140/mesa-r15140
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# environment
+FLITE3D_ST_EXE = undefined
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+LD_LIBRARY_PATH = /opt/flowsolAIR/FSLibs/linux64:/opt/flowsolAIR/SysLibs/linux64:/opt/flowsolAIR/CasLibs/linux64
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# environment
+PICO_SDK_PATH = /opt/pico-sdk
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /opt/tamarin-prover/bin:/opt/su2/bin:/opt/nuxmv/bin:/opt/MESA15140/mesasdk/bin:/opt/Mathematica13.1/Executables:/opt/maple2022/bin:/opt/Isabelle2018/bin:/opt/firefox:/opt/eclipse/bin:/opt/eclipse2023/eclipse/bin:/usr/local/cuda/bin:/opt/openocd/bin:/opt/picotool:/opt/ads2023/bin:/opt/tamarin-prover/bin:/opt/su2/bin:/opt/nuxmv/bin:/opt/MESA15140/mesasdk/bin:/opt/Mathematica13.1/Executables:/opt/maple2022/bin:/opt/Isabelle2018/bin:/opt/firefox:/opt/eclipse/bin:/opt/eclipse2023/eclipse/bin:/usr/local/cuda/bin:/opt/openocd/bin:/opt/picotool:/opt/ads2023/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/MESA15140/mesasdk/bin:/opt/netkit/bin:/opt/scyther/bin:/opt/sicstus4/bin:/opt/bin:/opt/flowsolAIR/bin/linux64:/opt/MESA15140/mesasdk/bin:/opt/netkit/bin:/opt/scyther/bin:/opt/sicstus4/bin
+# default
+MAKEFILES := 
+# environment
+MODULESHOME = /usr/share/lmod/lmod
+# environment
+SCYPRO = /opt/scyther/bin
+# automatic
+^F = $(notdir $^)
+# environment
+LMOD_sys = Linux
+# environment
+INVOCATION_ID = 3bb84f417b1d49a2863cc07c055b8387
+# environment
+USERNAME = fj00250
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+GTK_IM_MODULE = ibus
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+PVM_ROOT = /opt/flowsolAIR/pvm3
+# environment
+LMOD_SETTARG_CMD = :
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+FSBROWSER = /usr/bin/firefox
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = fj00250
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# environment
+BASH_ENV = /usr/share/lmod/lmod/init/bash
+# makefile
+.DEFAULT_GOAL := 
+# environment
+SYSTEMD_EXEC_PID = 51935
+# environment
+MODULEPATH_ROOT = /usr/modulefiles
+# environment
+DISPLAY = :1
+# environment
+USER = fj00250
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+MANAGERPID = 51571
+# environment
+XUSERFILESEARCHPATH = /opt/flowsolAIR/app-defaults/%N:/opt/flowsolAIR/app-defaults/%N
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 58101
+# environment
+FSOS = linux64
+# environment
+LMOD_arch = x86_64
+# environment
+_ = /usr/share/code/code
+# environment
+MESASDK_VERSION = x86_64-linux-20.3.2
+# environment
+XDG_RUNTIME_DIR = /run/user/339885
+# environment
+GPG_AGENT_INFO = /run/user/339885/gnupg/S.gpg-agent:0:1
+# environment
+FSUNITS = user_defined
+# environment
+JOURNAL_STREAM = 8:181207
+# environment
+XDG_SESSION_CLASS = user
+# environment
+FSHELPROOT = http://heron115.eps.surrey.ac.uk:8180/cgi-bin/tohtml
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /user/HS400/fj00250
+# environment
+QT_IM_MODULE = ibus
+# environment
+MESA_CACHES_DIR = /scratch/mesa_caches/fj00250
+# environment
+VALGRIND_LIB = /opt/MESA15140/mesasdk/lib/valgrind
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/339885/vscode-e83a092a-1.94-main.sock
+# environment
+NEWPAN_EXE = /opt/flowsolAIR/bin/linux64/newpan
+# environment
+FSPLUGDIR = /opt/flowsolAIR/Plugins/linux64
+# environment
+LMOD_PREPEND_BLOCK = normal
+ 
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+NEWPAN_RUN_TYPE = ALL
+# default
+SUFFIXES := 
+# environment
+FSBIN = /opt/flowsolAIR/bin/linux64
+# environment
+LMOD_PKG = /usr/share/lmod/lmod
+# environment
+FSHOME = /opt/flowsolAIR
+# environment
+FSSPACEDISABLE = ON
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+FSINITIALVIEW = AXON
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+MESASDK_ROOT = /opt/MESA15140/mesasdk
+# environment
+LMOD_VERSION = 6.6
+# environment
+GDMSESSION = ubuntu
+# variable set hash-table stats:
+# Load=146/1024=14%, Rehash=0, Collisions=7/173=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 80, inode 15996328654): 9 files, no impossibilities.
+
+# 9 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 17 / storage = 156 B / avg = 9 B
+# current buf: size = 8162 B / used = 156 B / count = 17 / avg = 9 B
+
+# strcache performance: lookups = 20 / hit rate = 15%
+# hash-table stats:
+# Load=17/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Fri Nov  8 13:09:42 2024
+
+ 
