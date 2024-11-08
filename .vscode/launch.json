@@ -4,7 +4,7 @@
     {
       "name": "Pico Debug",
       "cwd": "${workspaceFolder}",
-      "executable": "build/cw1031.elf",
+      "executable": "build/pico.elf",
       "request": "launch",
       "type": "cortex-debug",
       "runToEntryPoint": "main",
