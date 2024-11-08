@@ -16,7 +16,7 @@
 int pressed;
 int notPressed = 0;
 bool pressedInitial = false;
-char* morse = ":(";
+char morse[4] = "";
 
 uint8_t valueArray[] = {
    0b11101110, // A
@@ -47,12 +47,9 @@ uint8_t valueArray[] = {
    0b11011010  // Z
 };
 
-char *morseCode[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",
-	 ".-..","--","-.","---",".--.","--.-",".-","-...","-.-.","-..",".",
-	 "..-.","--.","....","..",".---","-.-",".-...","--","-.","---",".--.",
-	 "--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+char morseCode[26][4] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
-char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+char alphabet[26][1] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
 
 // --------------------------------------------------------------------
@@ -96,8 +93,8 @@ int main() {
         // check if the button press is a dot or a dash
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
-			char* morse = strcat(morse, addition);
-			printf("%s %s\n",morse, addition);
+			strcat(morse, addition);
+			printf("%s\n", morse);
 		}
 		notPressed++;
 		checkTimeout();
@@ -127,19 +124,18 @@ char* checkButton() {
 
 void checkTimeout() {
 	if (notPressed >= 400 && pressedInitial) {
-		decoder();
-		morse = "";
+		int index = decoder();
+		memset(morse, 0, strlen(morse));
+		pressedInitial = false;
 	}
 }
 
 int decoder() {
-
 	for(int i = 0; i < sizeof(morseCode); i++) {
-		if(strcmp(morseCode[i], morse) && notPressed < 401) {
-			printf("%s\n", alphabet[i]);
+		printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode));
+		if(strcmp(morseCode[i], morse) == 0 && notPressed < 401) {
+			printf("%s %s %s\n", alphabet[i], i, "345");
 			return i;
-		}else {
-			return -1;
 		}
 	}
 	
