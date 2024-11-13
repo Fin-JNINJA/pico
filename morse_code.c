@@ -17,8 +17,10 @@
 // declare global variables e.g., the time when the button is pressed 
 int pressed;
 int notPressed = 0;
+int attempts = 0;
 bool pressedInitial = false;
 char morse[4] = "";
+TaskCompletionSource<bool> IsSomethingLoading = new TaskCompletionSource<bool>();
 
 uint8_t valueArray[] = {
    0b11101110, // A
@@ -62,6 +64,8 @@ int decoder();
 // check if the button press is a dot or a dash
 char* checkButton();
 void checkTimeout();
+
+void checkProgram();
 
 int main() {
 
@@ -124,6 +128,18 @@ char* checkButton() {
 
 }
 
+void checkProgram() {
+	
+	IsSomethingLoading.SetResult(true);
+	attempts = 0;
+}
+SomeData TheData;
+
+public async Task<SomeData> checkProgram() {
+   await IsSomethingLoading.Task;
+   return TheData;
+}
+
 void checkTimeout() {
 	if ((notPressed >= 400 && pressedInitial) || strlen(morse) == 4) {
 		int index = decoder();
@@ -131,7 +147,13 @@ void checkTimeout() {
 			printf("8\n");
 			//error
 		}else {
+			attempts++;
 			printf("%s\n", alphabet[index]);
+			if(attempts == 4) {
+				checkProgram();
+			}
+			//correct
+
 		}
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
