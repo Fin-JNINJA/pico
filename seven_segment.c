@@ -32,10 +32,5 @@ unsigned void seven_segment_show(unsigned int number) {
     }
 }
 
-void flashSegments(int index) {
-    seven_segment_show(index + 1);
-    sleep_ms(500);
-	seven_segment_off();
-}
 
 
