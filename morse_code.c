@@ -4,6 +4,7 @@
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
 #include "includes/LED.h"
+#include "includes/potentiometer.h"
 #include "includes/morse_code.h"
 
 int pressed;
@@ -18,11 +19,14 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 int main() {
 
 	timer_hw->dbgpause = 0;
+
 	stdio_init_all();
 
 	printf("hello!!!!!!!\n");
 
 	seven_segment_init();
+
+	potentiometer_init();
 
 	setup_rgb();
 
@@ -53,13 +57,14 @@ int main() {
 }
 
 char* checkButton() {
-	int lower = 250;
+	int lower = 250 * potentiometer_read(1,3);
+	printf("time limit: %dms", lower);
 	char* temp;
 	if(pressedInitial) {
 		if (pressed < lower) {
 		printf("Button small\n");
 		temp = ".";
-		} else if (pressed >= lower && pressed < 700) {
+		} else if (pressed >= lower && pressed <= 700) {
 			printf("Button large\n");
 			temp = "-";
 		} else {
@@ -89,8 +94,6 @@ void checkTimeout() {
 		seven_segment_off();
 	}
 }
-
-
 
 int decoder() {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {

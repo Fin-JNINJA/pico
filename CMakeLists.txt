@@ -5,5 +5,5 @@ project(pico C CXX ASM)
 
 pico_sdk_init()
 
-add_executable(pico morse_code.c buzzer.c LED.c)
+add_executable(pico morse_code.c buzzer.c LED.c potentiometer.c)
 target_link_libraries(pico pico_stdlib hardware_pwm hardware_adc)
