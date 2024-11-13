@@ -11,6 +11,10 @@
 #define MAX_COLOUR_VALUE 255
 #define MAX_PWM_LEVEL 65535
 
+
+void setup_rgb();
+
+
 void setup_rgb()
 {
     // Tell the LED pins that the PWM is in charge of its value.
@@ -42,15 +46,17 @@ void show_rgb(int r, int g, int b)
     pwm_set_gpio_level(B, ~(MAX_PWM_LEVEL * b / MAX_COLOUR_VALUE * BRIGHTNESS / 100));
 }
 
-void LED(bool t_f)
+void LED(int num)
 {
-    timer_hw->dbgpause = 0;
-    stdio_init_all();
-    setup_rgb();
-    //If the morse input is invalid t_f should be false, otherwise t_f is true and should be added
-    if (t_f) {
+    if (num == 1) {
         show_rgb(0,255,0);
-    } else {
+        sleep_ms(20);
+        LED(0);
+    }else if (num == 2) {
         show_rgb(255,0,0);
+        sleep_ms(20);
+        LED(0);
+    }else {
+        show_rgb(0,0,0);  
     }
 }

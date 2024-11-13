@@ -74,6 +74,9 @@ int main() {
 	// Initialise the seven segment display.
 	seven_segment_init();
 
+	// Setup the RGB LED.
+	setup_rgb();
+
 	// Turn the seven segment display off when the program starts.
 	seven_segment_off();
 
@@ -145,7 +148,7 @@ void checkTimeout() {
 		int index = decoder();
 		if(index < 0) {
 			printf("8\n");
-			LED(false);
+			LED(2);
 			//error
 		}else {
 			attempts++;
@@ -153,7 +156,7 @@ void checkTimeout() {
 			if(attempts == 4) {
 				//checkProgram();
 			}
-			LED(true);
+			LED(1);
 			//correct
 
 		}
