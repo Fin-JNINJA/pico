@@ -20,6 +20,8 @@
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "files.associations": {
     "stdlib.h": "c",
-    "buzzer.h": "c"
+    "buzzer.h": "c",
+    "seven_segment.h": "c",
+    "led.h": "c"
   },
 }

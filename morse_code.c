@@ -4,9 +4,10 @@
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
 #include "includes/LED.h"
+#include "includes/morse_code.h"
 
 int pressed;
-float notPressed = 0;
+int notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
 
@@ -33,12 +34,10 @@ int main() {
 
 	while (true) {
 		pressed = 0;
-		clock_t clock = clock();
 		while (gpio_get(BUTTON_PIN)){
-			clock_t clockInner = clock();
 			notPressed = 0;
 			pressedInitial = true;
-			pressed += 1 - (double)(clock() - clockInner);
+			pressed++;
 			sleep_ms(1);
 		}
 
@@ -48,7 +47,7 @@ int main() {
 			//printf("%s\n", morse);
 		}
 		checkTimeout();
-		notPressed += 1 - (double)(clock() - clock);
+		notPressed++;
 		sleep_ms(1);
 	}
 }
@@ -65,7 +64,6 @@ char* checkButton() {
 			temp = "-";
 		} else {
 			temp = ",";
-			printf("8\n");
 		}
 	}
 	return temp;
@@ -79,7 +77,6 @@ void checkTimeout() {
 			LED(2);
 			//error
 		}else {
-			attempts++;
 			printf("%s\n", alphabet[index]);
 			
 			LED(1);
