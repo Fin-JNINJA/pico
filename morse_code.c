@@ -57,15 +57,13 @@ int main() {
 }
 
 char* checkButton() {
-	int lower = 250 * potentiometer_read(1,3);
-	printf("time limit: %dms", lower);
 	char* temp;
 	if(pressedInitial) {
-		if (pressed < lower) {
-		printf("Button small\n");
+		if (pressed < 250) {
+		printf("Button short\n");
 		temp = ".";
-		} else if (pressed >= lower && pressed <= 700) {
-			printf("Button large\n");
+		} else if (pressed >= 250 && pressed <= 700) {
+			printf("Button long\n");
 			temp = "-";
 		} else {
 			temp = ",";
@@ -75,8 +73,9 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	if (notPressed >= 400 && pressedInitial) {
-		int index = decoder();
+	int range = 40 * potentiometer_read(5,10);
+	if (notPressed >= range && pressedInitial) {
+		int index = decoder(range);
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
@@ -95,10 +94,9 @@ void checkTimeout() {
 	}
 }
 
-int decoder() {
+int decoder(int range) {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
-		//printf("%d %s %s\n", strcmp(morseCode[i], morse), morse, morseCode[i]);
-		if(strcmp(morseCode[i], morse) == 0 && notPressed < 401) {
+		if(strcmp(morseCode[i], morse) == 0 && notPressed < (range + 1)) {
 			return i;
 		}
 	}

@@ -2,7 +2,7 @@
 
 #define BUTTON_PIN 16
 
-int decoder();
+int decoder(int range);
 
 void setup_rgb();
 
