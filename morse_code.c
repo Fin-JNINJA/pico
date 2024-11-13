@@ -18,7 +18,7 @@ int pressed;
 int notPressed = 0;
 int attempts = 0;
 bool pressedInitial = false;
-char morse[4] = "";
+char morse[5] = "";
 
 uint8_t valueArray[] = {
    0b11101110, // A
@@ -49,7 +49,7 @@ uint8_t valueArray[] = {
    0b11011010  // Z
 };
 
-char morseCode[26][4] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
 char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
@@ -169,7 +169,7 @@ void checkTimeout() {
 
 int decoder() {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
-		printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode) / 4);
+		//printf("%d %s %s\n", strcmp(morseCode[i], morse), morse, morseCode[i]);
 		if(strcmp(morseCode[i], morse) == 0 && notPressed < 401) {
 			return i;
 		}
