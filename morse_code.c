@@ -75,20 +75,20 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
-			seven_segment_show(27);
+			flashSegments(26);
 			//error
 		}else {
 			printf("%s\n", alphabet[index]);
 			LED(1);
-			seven_segment_show(index + 1);
+			flashSegments(index);
 			//correct
 		}
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
-		sleep_ms(500);
-		seven_segment_off();
 	}
 }
+
+
 
 int decoder() {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
