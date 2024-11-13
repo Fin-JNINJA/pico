@@ -145,6 +145,7 @@ void checkTimeout() {
 		int index = decoder();
 		if(index < 0) {
 			printf("8\n");
+			LED(false);
 			//error
 		}else {
 			attempts++;
@@ -152,6 +153,7 @@ void checkTimeout() {
 			if(attempts == 4) {
 				//checkProgram();
 			}
+			LED(true);
 			//correct
 
 		}
