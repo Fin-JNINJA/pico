@@ -9,6 +9,7 @@
 #include <string.h>
 #include "pico/stdlib.h"
 #include "LED.c"
+#include "buzzer.c"
 #include "includes/seven_segment.h"
 
 #define BUTTON_PIN			16	// Pin 21 (GPIO 16)
@@ -124,12 +125,13 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	if (notPressed >= 400 && pressedInitial) {
+	if ((notPressed >= 400 && pressedInitial) || strlen(morse) == 4) {
 		int index = decoder();
-		if(index != -1) {
-
+		if(index < 0) {
+			printf("8\n");
+			//error
 		}else {
-
+			printf("%s\n", alphabet[index]);
 		}
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
