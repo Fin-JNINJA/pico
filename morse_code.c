@@ -1,19 +1,12 @@
-/**
- * The given template is a guideline for your coursework only.
- * You are free to edit/create any functions and variables.
- * You can add extra C files if required.
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include "pico/stdlib.h"
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
+#include "includes/LED.h"
 
-#define BUTTON_PIN			16	// Pin 21 (GPIO 16)
+#define BUTTON_PIN 16
 
-// declare global variables e.g., the time when the button is pressed 
 int pressed;
 int notPressed = 0;
 int attempts = 0;
@@ -53,19 +46,13 @@ char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "...."
 
 char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
-
-// --------------------------------------------------------------------
-// declare the function definitions, e.g, decoder(...); and ther functions
-// given the user input, you can decode if the input is a character
 int decoder();
 
 void setup_rgb();
 
-// check if the button press is a dot or a dash
 char* checkButton();
-void checkTimeout();
 
-void checkProgram();
+void checkTimeout();
 
 int main() {
 
@@ -73,33 +60,27 @@ int main() {
 	stdio_init_all();
 
 	printf("hello!!!!!!!\n");
-	// Initialise the seven segment display.
+
 	seven_segment_init();
 
-	// Setup the RGB LED.
 	setup_rgb();
 
-	// Turn the seven segment display off when the program starts.
 	seven_segment_off();
 
-	// Initialise the button"s GPIO pin.
 	gpio_init(BUTTON_PIN);
 	gpio_set_dir(BUTTON_PIN, GPIO_IN);
-	gpio_pull_down(BUTTON_PIN); // Pull the button pin towards ground (with an internal pull-down resistor).
+	gpio_pull_down(BUTTON_PIN);
 
 	while (true) {
 		
 		pressed = 0;
 		while (gpio_get(BUTTON_PIN)){
-            // record how long the button is pressed
-            // .....
-			//printf("This line is a test\n");  // you can remove this line
-			sleep_ms(1); // adjust the sleep_ms as required
+			sleep_ms(1);
 			pressed++;
 			notPressed = 0;
 			pressedInitial = true;
 		} 
-        // check if the button press is a dot or a dash
+
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
@@ -124,26 +105,11 @@ char* checkButton() {
 			temp = "-";
 		} else {
 			temp = ",";
-			printf("press error\n");
+			printf("8\n");
 		}
 	}
 	return temp;
-
 }
-/*
-void checkProgram() {
-	
-	IsSomethingLoading.SetResult(gpio_get(BUTTON_PIN));
-	attempts = 0;
-}*/
-/*
-TaskCompletionSource<bool> IsSomethingLoading = new TaskCompletionSource<bool>();
-SomeData TheData;
-
-public async Task<SomeData> GetTheData() {
-   await IsSomethingLoading.Task;
-   return TheData;
-}*/
 
 void checkTimeout() {
 	if (notPressed >= 400 && pressedInitial) {
@@ -160,7 +126,6 @@ void checkTimeout() {
 			}
 			LED(1);
 			//correct
-
 		}
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
