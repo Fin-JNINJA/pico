@@ -59,6 +59,8 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 // given the user input, you can decode if the input is a character
 int decoder();
 
+void setup_rgb();
+
 // check if the button press is a dot or a dash
 char* checkButton();
 void checkTimeout();
@@ -101,7 +103,7 @@ int main() {
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
-			printf("%s\n", morse);
+			//printf("%s\n", morse);
 		}
 		notPressed++;
 		checkTimeout();
@@ -167,7 +169,7 @@ void checkTimeout() {
 
 int decoder() {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
-		printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode) / 4);
+		//printf("%d %d\n", strcmp(morseCode[i], morse), sizeof(morseCode) / 4);
 		if(strcmp(morseCode[i], morse) == 0 && notPressed < 401) {
 			return i;
 		}

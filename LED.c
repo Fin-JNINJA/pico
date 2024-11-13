@@ -12,9 +12,6 @@
 #define MAX_PWM_LEVEL 65535
 
 
-void setup_rgb();
-
-
 void setup_rgb()
 {
     // Tell the LED pins that the PWM is in charge of its value.
