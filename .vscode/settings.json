@@ -22,6 +22,7 @@
     "stdlib.h": "c",
     "buzzer.h": "c",
     "seven_segment.h": "c",
-    "led.h": "c"
+    "led.h": "c",
+    "morse_code.h": "c"
   },
 }

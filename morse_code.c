@@ -5,12 +5,14 @@
 #include "includes/buzzer.h"
 #include "includes/LED.h"
 #include "includes/potentiometer.h"
+#include "includes/button.h"
 #include "includes/morse_code.h"
 
 int pressed;
 int notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
+bool keepActive = true;
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
@@ -22,7 +24,7 @@ int main() {
 
 	stdio_init_all();
 
-	printf("hello!!!!!!!\n");
+	button_init();
 
 	seven_segment_init();
 
@@ -30,15 +32,13 @@ int main() {
 
 	setup_rgb();
 
+	printf("hello!\n");
+
 	seven_segment_off();
 
-	gpio_init(BUTTON_PIN);
-	gpio_set_dir(BUTTON_PIN, GPIO_IN);
-	gpio_pull_down(BUTTON_PIN);
-
-	while (true) {
+	while (keepActive) {
 		pressed = 0;
-		while (gpio_get(BUTTON_PIN)){
+		while (getButtonPress()){
 			notPressed = 0;
 			pressedInitial = true;
 			pressed++;
@@ -54,6 +54,11 @@ int main() {
 		notPressed++;
 		sleep_ms(1);
 	}
+
+
+	//endProgram();
+
+
 }
 
 char* checkButton() {
