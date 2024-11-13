@@ -55,4 +55,11 @@ void seven_segment_off();
 
 void seven_segment_show(unsigned int number);
 
+        gpio_put(
+            ALL_SEGMENTS[i],
+            !illuminateSegment
+        );
+    }
+}
+
 void flashSegments(int index);
