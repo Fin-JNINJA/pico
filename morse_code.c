@@ -10,6 +10,7 @@
 #include "pico/stdlib.h"
 #include "LED.c"
 #include "includes/seven_segment.h"
+#include "includes/buzzer.h"
 
 #define BUTTON_PIN			16	// Pin 21 (GPIO 16)
 
