@@ -59,7 +59,8 @@ uint8_t values[] = {
     0b01010100, // W
     0b01101110, // X
     0b01110110, // Y
-    0b11011010  // Z
+    0b11011010, // Z
+    0b11111110  // 8
 };
 
 /* Initialise the GPIO pins for the seven-segment display. */

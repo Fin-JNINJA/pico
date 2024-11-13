@@ -22,35 +22,6 @@
  * page 2 of the datasheet linked at the top of seven_segment.h.
  */
 // You will need to extend the array to include more numbers.
-uint8_t values[] = {
-    0b00000000, // Nothing
-    0b11101110, // A
-    0b00111110, // B
-    0b10011100, // C
-    0b01111010, // D
-    0b10011110, // E
-    0b10001110, // F
-    0b11110110, // G
-    0b01101110, // H
-    0b00001100, // I
-    0b01111000, // J
-    0b01101110, // K
-    0b00011100, // L
-    0b10101000, // M
-    0b00101010, // N
-    0b11111100, // O
-    0b11001110, // P
-    0b11100110, // Q
-    0b00001010, // R
-    0b10110110, // S
-    0b00011110, // T
-    0b01111100, // U
-    0b00111000, // V
-    0b01010100, // W
-    0b01101110, // X
-    0b01110110, // Y
-    0b11011010  // Z
-};
 
 // ------------------------------------------------------------------
 
@@ -79,46 +50,19 @@ void seven_segment_on() {
  * @return Zero if the number has been successfully displayed, otherwise a non-zero
  * value.
  */
-unsigned int seven_segment_show(unsigned int number) {
+unsigned void seven_segment_show(unsigned int number) {
     // the number is bigger than 4, the current program cannot display
     // you need to extend the program to display more numbers & alphabets
-    if (number > 26) return 1;
 
     /** You don't need to edit the following code within the for-loop **/
 	//this loop goes through the segments one by one and checks if that segment
 	// should be on or off then it turns it on or off
     for (unsigned int i = 0; i < 8; i++) {
-        // Create a mask to check the current bit.
-        //
-        // Our first segment (A) starts in the most-significant
-        // bit of the bitfield, so we need to 7 - i to map i to
-        // the bit for the relevant segment as follows:
-        //
-        // i = 0 -> 7 - i = 7 - 0 = 7
-        // i = 1 -> 7 - i = 7 - 1 = 6
-        // ...
-        // i = 6 -> 7 - i = 7 - 6 = 1
-        // i = 7 -> 7 - i = 7 - 7 =  0
         unsigned int segmentBit = 1 << (7 - i);
-
-        // When the segmentBit is 1 << 7, it produces 0b1000_0000.
-        // Where 1 is in the most significant bit and all the other
-        // bits are 0.
-
-        // Bitwise-and the segmentBit with the bitfield for the
-        // current number. If we get zero, it means that segment
-        // should turned off, otherwise the bit is turned on.
         bool illuminateSegment = (segmentBit & values[number]); // != 0;
-
-        // Recall, however, that because the display is common-anode,
-        // whenever we want to illuminate a segment, we actually need
-        // to pull that pin low (i.e., put false).
         gpio_put(
             ALL_SEGMENTS[i],
             !illuminateSegment
         );
-        
-    }
-    return 0;
-
+}
 }
