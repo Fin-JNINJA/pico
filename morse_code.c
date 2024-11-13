@@ -18,7 +18,7 @@ int pressed;
 int notPressed = 0;
 int attempts = 0;
 bool pressedInitial = false;
-char morse[4] = "";
+char morse[5] = "";
 
 uint8_t valueArray[] = {
    0b11101110, // A
@@ -146,7 +146,7 @@ public async Task<SomeData> GetTheData() {
 }*/
 
 void checkTimeout() {
-	if ((notPressed >= 400 && pressedInitial) || strlen(morse) == 4) {
+	if ((notPressed >= 400 && pressedInitial) || strlen(morse) > 4) {
 		int index = decoder();
 		if(index < 0) {
 			printf("8\n");
