@@ -8,8 +8,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "pico/stdlib.h"
-#include "LED.c"
-#include "buzzer.c"
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
 
@@ -21,7 +19,6 @@ int notPressed = 0;
 int attempts = 0;
 bool pressedInitial = false;
 char morse[4] = "";
-TaskCompletionSource<bool> IsSomethingLoading = new TaskCompletionSource<bool>();
 
 uint8_t valueArray[] = {
    0b11101110, // A
@@ -128,18 +125,20 @@ char* checkButton() {
 	return temp;
 
 }
-
+/*
 void checkProgram() {
 	
-	IsSomethingLoading.SetResult(true);
+	IsSomethingLoading.SetResult(gpio_get(BUTTON_PIN));
 	attempts = 0;
-}
+}*/
+/*
+TaskCompletionSource<bool> IsSomethingLoading = new TaskCompletionSource<bool>();
 SomeData TheData;
 
-public async Task<SomeData> checkProgram() {
+public async Task<SomeData> GetTheData() {
    await IsSomethingLoading.Task;
    return TheData;
-}
+}*/
 
 void checkTimeout() {
 	if ((notPressed >= 400 && pressedInitial) || strlen(morse) == 4) {
@@ -151,7 +150,7 @@ void checkTimeout() {
 			attempts++;
 			printf("%s\n", alphabet[index]);
 			if(attempts == 4) {
-				checkProgram();
+				//checkProgram();
 			}
 			//correct
 
