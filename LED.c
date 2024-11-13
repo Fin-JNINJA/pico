@@ -56,7 +56,7 @@ void LED(int num) {
             LED(0);
             break;
         default:
-            pwm_init(pwm_gpio_to_slice_num(R), &pwm_get_default_config(), false);
+            show_rgb(0,0,0);
             break;
     }
 }

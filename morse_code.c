@@ -5,54 +5,14 @@
 #include "includes/buzzer.h"
 #include "includes/LED.h"
 
-#define BUTTON_PIN 16
-
 int pressed;
-int notPressed = 0;
-int attempts = 0;
+float notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
-
-uint8_t valueArray[] = {
-   0b11101110, // A
-   0b00111110, // B
-   0b10011100, // C
-   0b01111010, // D
-   0b10011110, // E
-   0b10001110, // F
-   0b11110110, // G
-   0b01101110, // H
-   0b00001100, // I
-   0b01111000, // J
-   0b01101110, // K
-   0b00011100, // L
-   0b10101000, // M
-   0b00101010, // N
-   0b11111100, // O
-   0b11001110, // P
-   0b11100110, // Q
-   0b00001010, // R
-   0b10110110, // S
-   0b00011110, // T
-   0b01111100, // U
-   0b00111000, // V
-   0b01010100, // W
-   0b01101110, // X
-   0b01110110, // Y
-   0b11011010  // Z
-};
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
 char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-
-int decoder();
-
-void setup_rgb();
-
-char* checkButton();
-
-void checkTimeout();
 
 int main() {
 
@@ -72,26 +32,26 @@ int main() {
 	gpio_pull_down(BUTTON_PIN);
 
 	while (true) {
-		
 		pressed = 0;
+		clock_t clock = clock();
 		while (gpio_get(BUTTON_PIN)){
-			sleep_ms(1);
-			pressed++;
+			clock_t clockInner = clock();
 			notPressed = 0;
 			pressedInitial = true;
-		} 
+			pressed += 1 - (double)(clock() - clockInner);
+			sleep_ms(1);
+		}
 
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
 			//printf("%s\n", morse);
 		}
-		notPressed++;
 		checkTimeout();
+		notPressed += 1 - (double)(clock() - clock);
 		sleep_ms(1);
 	}
 }
-
 
 char* checkButton() {
 	int lower = 250;
@@ -121,9 +81,7 @@ void checkTimeout() {
 		}else {
 			attempts++;
 			printf("%s\n", alphabet[index]);
-			if(attempts == 4) {
-				//checkProgram();
-			}
+			
 			LED(1);
 			//correct
 		}
