@@ -2,4 +2,4 @@
 
 void setup_rgb(); 
 
-void LED();
+void LED(int num);
