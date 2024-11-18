@@ -38,7 +38,7 @@ int main() {
 
 	while (keepActive) {
 		pressed = 0;
-		while (getButtonPress()){
+		while (getButtonPress()) {
 			notPressed = 0;
 			pressedInitial = true;
 			pressed++;
