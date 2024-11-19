@@ -72,3 +72,5 @@ void seven_segment_show(unsigned int number) {
         );
     }
 }
+
+void* display_screen(int* code);

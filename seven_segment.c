@@ -32,5 +32,11 @@ unsigned void seven_segment_show(unsigned int number) {
     }
 }
 
+void* display_screen(int* code) {
+	seven_segment_show(code);
+	sleep(400);
+	seven_segment_off();
+    return NULL;
+}
 
 

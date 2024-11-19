@@ -1,6 +1,7 @@
 //imports
 #include <stdio.h>
 #include <string.h>
+#include <pthread.h>
 #include "pico/stdlib.h"
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
@@ -25,6 +26,7 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 int main() {
 
 	setup(); // initializes circuits 
+
 
 	while (keepActive) { // main loop
 		
@@ -55,7 +57,9 @@ int main() {
 		while (valid_inputs >= 4) { // end loop
 			if(getButtonPress()) {
 				valid_inputs = 0;
-				LED(1);
+				pthread_t LED_id;
+				pthread_create(&LED_id, NULL, LED, 1);
+				
 				memset(word, 0, strlen(word));
 			}
 
@@ -65,28 +69,28 @@ int main() {
 			}
 		}
 	}
-
 }
 
 char* checkButton() {
 	char* temp;
 
 	if(pressedInitial) {
+		pthread_t buzzer_id;
 		if (pressed < 250) {
 			printf("Button short\n");
 			temp = ".";
-			buzzer_signal(1);
+			pthread_create(&buzzer_id, NULL, buzzer_signal, 1);
 		}
 		
 		else if (pressed >= 250 && pressed <= 700) {
 			printf("Button long\n");
 			temp = "-";
-			buzzer_signal(2);
+			pthread_create(&buzzer_id, NULL, buzzer_signal, 2);
 		}
 		
 		else {
 			temp = ",";
-			buzzer_signal(3);
+			pthread_create(&buzzer_id, NULL, buzzer_signal, 3);
 		}
 	}
 
@@ -98,26 +102,27 @@ void checkTimeout() {
 	if (notPressed >= range && pressedInitial) {
 
 		int index = decoder(range);
-
+		pthread_t LED_id;
+		pthread_t seven_id;
 		if(index < 0) {
 			printf("8\n");
-			LED(2);
-			seven_segment_show(27);
+			pthread_create(&LED_id, NULL, LED, 2);
+			pthread_create(&LED_id, NULL, display_screen, 27);
 			//handles error
 		}
 		
 		else {
 			printf("%s\n", alphabet[index]);
 			strcat(word,alphabet[index]);
-			LED(1);
-			seven_segment_show(index + 1);
+			pthread_t LED_id;
+			pthread_t seven_id;
+			pthread_create(&LED_id, NULL, LED, 1);
+			pthread_create(&LED_id, NULL, display_screen, index + 1);
 			//handles response
 		}
 
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
-		sleep_ms(500);
-		seven_segment_off();
 	}
 
 }
@@ -162,9 +167,14 @@ void setup() {
             temp_int = read;
             printf("timeout is set to: %dms \n",temp_int * 40);
         }
-		
+
         if(getButtonPress() || getButtonPress2()) {
             temp = false;
         }
     }
 }
+
+
+
+
+

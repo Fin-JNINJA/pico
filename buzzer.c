@@ -61,7 +61,7 @@ void playExitSong() {
     buzzer_disable();
 }
 
-void buzzer_signal(int code){
+void* buzzer_signal(int* code){
 	buzzer_init();
 	switch (code){
 		case 1:
@@ -83,4 +83,5 @@ void buzzer_signal(int code){
 			break;
 	}
 	buzzer_disable();
+    return NULL;
 }
