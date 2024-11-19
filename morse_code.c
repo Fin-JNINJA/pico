@@ -39,16 +39,16 @@ int main() {
 			char* addition = checkButton();
 			strcat(morse, addition);
 			printf("%s\n", morse); //Error checking i'm assuming?
-			if (addition == "-" || addition == ".") {
-				valid_inputs += 1;
-			}
 		}
 		notPressed++;
 		checkTimeout();
 		sleep_ms(1);
 
-		
+		if (valid_inputs >= 4) {
+			playExitSong();
+		}
 			while (valid_inputs >= 4) {
+				
 				if(getButtonPress()) {
 					valid_inputs = 0;
 					LED(1);
@@ -107,6 +107,7 @@ void checkTimeout() {
 int decoder(int range) {
 	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
 		if(strcmp(morseCode[i], morse) == 0 && notPressed < (range + 1)) {
+			valid_inputs++;
 			return i;
 		}
 	}
@@ -146,10 +147,4 @@ void setup() {
             temp = false;
         }
     }
-}
-
-void buddy_holly(){
-	buzzer_init(); //
-	buzzer_enable(400);
-	sleep_ms(100);
 }
