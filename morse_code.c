@@ -15,8 +15,6 @@ char morse[5] = "";
 char word[5] = "";
 bool keepActive = true;
 int valid_inputs = 0;
-void buzzer_signal(int code); //idk if this is needed
-
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
@@ -38,7 +36,7 @@ int main() {
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
-			printf("%s\n", morse); //Error checking i'm assuming?
+			printf("%s\n", morse);
 		}
 		notPressed++;
 		checkTimeout();
@@ -76,7 +74,7 @@ char* checkButton() {
 			temp = "-";
 			buzzer_signal(2);
 		} else {
-			temp = ","; // should be blank instead of comma??? used to be comma
+			temp = ",";
 			buzzer_signal(3);
 		}
 	}

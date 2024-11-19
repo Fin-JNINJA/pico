@@ -37,5 +37,15 @@ double clamp(int value, int min, int max) {
 }
 
 unsigned int potentiometer_read(int min, int max) {
-    return map(clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX), POTENTIOMETER_MIN, POTENTIOMETER_MAX, min, max);
+    return map(
+        clamp(
+            potentiometer_read_raw(), 
+            POTENTIOMETER_MIN,
+            POTENTIOMETER_MAX
+        ),
+        POTENTIOMETER_MIN,
+        POTENTIOMETER_MAX,
+        min,
+        max
+    );
 }
