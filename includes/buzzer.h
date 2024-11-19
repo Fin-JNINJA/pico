@@ -27,3 +27,5 @@ void buzzer_disable();
 void buzzer_enable(unsigned int frequency);
 
 void buzzer_signal(int code);
+
+void playExitSong();
