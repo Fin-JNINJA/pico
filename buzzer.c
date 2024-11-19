@@ -59,7 +59,6 @@ void playExitSong() {
         sleep_ms(300);
 	}
     buzzer_disable();
-    printf("would you like to leave?\n");
 }
 
 void buzzer_signal(int code){

@@ -12,7 +12,7 @@ int pressed;
 int notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
-char word[4] = "";
+char word[5] = "";
 bool keepActive = true;
 int valid_inputs = 0;
 void buzzer_signal(int code); //idk if this is needed
@@ -46,6 +46,7 @@ int main() {
 
 		if (valid_inputs >= 4) {
 			playExitSong();
+			printf("Your word is:  %s\nWould you like to leave?\n",word);
 		}
 			while (valid_inputs >= 4) {
 				
@@ -92,6 +93,7 @@ void checkTimeout() {
 			//error
 		}else {
 			printf("%s\n", alphabet[index]);
+			strcat(word,alphabet[index]);
 			LED(1);
 			seven_segment_show(index + 1);
 			//correct
