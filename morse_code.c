@@ -115,8 +115,6 @@ int decoder(int range) {
 
 void setup() {
 
-    printf("hello!\n");
-
     bool temp = true;
     int temp_int = 0;
 
@@ -136,12 +134,13 @@ void setup() {
 
 	buzzer_init();
 
-    printf("please set potentiometer level and press any button to continue\n");
+    printf("Hello!\nplease set potentiometer level and press any button to continue\n");
 
     while(temp) {
-        if(potentiometer_read() != temp_int) {
-            temp_int = potentiometer_read();
-            printf("potentiometer is set to: %d %d\n",temp_int,potentiometer_read());
+		int read = potentiometer_read();
+        if(read != temp_int) {
+            temp_int = read;
+            printf("timeout is set to: %dms \n",temp_int * 40);
         }
         if(getButtonPress() || getButtonPress2()) {
             temp = false;

@@ -3,7 +3,7 @@
 #include "hardware/adc.h"
 #include "includes/potentiometer.h"
 
-#define POTENTIOMETER_MIN       1
+#define POTENTIOMETER_MIN       2025
 #define POTENTIOMETER_MAX       4050
 
 void potentiometer_init() {
@@ -37,5 +37,5 @@ double clamp(int value, int min, int max) {
 }
 
 unsigned int potentiometer_read() {
-    return (clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX) / 4050) * 20;
+    return round((clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX) / 4050) * 10);
 }
