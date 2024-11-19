@@ -25,20 +25,4 @@
     "led.h": "c",
     "morse_code.h": "c"
   },
-  "cmake.touchbar.visibility": "hidden",
-  "cmake.options.advanced": {
-
-    "build": {
-      "statusBarVisibility": "inherit",
-      "inheritDefault": "hidden"
-    },
-    "launch": {
-      "statusBarVisibility": "inherit",
-      "inheritDefault": "hidden"
-    },
-    "debug": {
-      "statusBarVisibility": "inherit",
-      "inheritDefault": "hidden"
-    }
-  },
 }
