@@ -2,7 +2,7 @@
 
 #define BUTTON_PIN 16
 
-#define BUTTON_PIN_SECOND 245325245
+#define BUTTON_PIN_SECOND 15
 
 void button_init();
 

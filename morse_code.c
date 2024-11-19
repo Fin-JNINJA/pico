@@ -54,7 +54,7 @@ int main() {
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
-			//printf("%s\n", morse);
+			//printf("%s\n", morse); //Error checking i'm assuming?
 		}
 		notPressed++;
 		valid_inputs += checkTimeout();
@@ -67,6 +67,9 @@ int main() {
 	printf("Program ended\n");
 
 	//endProgram();
+	/*Check if 4 valid inputs
+	  play buddy holly
+	  exit button becomes available*/
 
 
 }
@@ -126,7 +129,7 @@ int decoder(int range) {
 }
 
 void buddy_holly(){
-	buzzer_init();
+	buzzer_init(); //
 	buzzer_enable(400);
 	sleep_ms(100);
 }
