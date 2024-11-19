@@ -84,7 +84,7 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	int range = 40 * potentiometer_read(1,10);
+	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
 		if(index < 0) {
@@ -141,7 +141,7 @@ void setup() {
     printf("Hello!\nplease set potentiometer level and press any button to continue\n");
 
     while(temp) {
-		int read = potentiometer_read(1,10);
+		int read = potentiometer_read(5,10);
         if(read != temp_int) {
             temp_int = read;
             printf("timeout is set to: %dms \n",temp_int * 40);
