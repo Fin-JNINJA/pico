@@ -7,3 +7,5 @@ void setup_rgb();
 char* checkButton();
 
 void checkTimeout();
+
+void setup();

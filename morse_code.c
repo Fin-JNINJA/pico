@@ -24,23 +24,7 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 
 int main() {
 
-	timer_hw->dbgpause = 0;
-
-	stdio_init_all();
-
-	button_init();
-
-	seven_segment_init();
-
-	potentiometer_init();
-
-	setup_rgb();
-
-	printf("hello!\n");
-
-	seven_segment_off();
-
-	buzzer_init();
+	setup();
 
 	while (keepActive) {
 		pressed = 0;
@@ -127,6 +111,42 @@ int decoder(int range) {
 		}
 	}
 	return -1;
+}
+
+void setup() {
+
+    printf("hello!\n");
+
+    bool temp = true;
+    int temp_int = 0;
+
+    timer_hw->dbgpause = 0;
+
+	stdio_init_all();
+
+	button_init();
+
+	seven_segment_init();
+
+	potentiometer_init();
+
+	setup_rgb();
+
+	seven_segment_off();
+
+	buzzer_init();
+
+    printf("please set potentiometer level and press any button to continue");
+
+    while(temp) {
+        if(temp_int != potentiometer_read(5,10)) {
+            temp_int == potentiometer_read(5,10);
+            printf("potentiometer is set to: %d",temp_int * 40);
+        }
+        if(getButtonPress() || getButtonPress2()) {
+            temp = false;
+        }
+    }
 }
 
 void buddy_holly(){
