@@ -14,7 +14,6 @@ bool pressedInitial = false;
 char morse[5] = "";
 char word[4] = "";
 bool keepActive = true;
-void buzzer_signal(int code); //idk if this is needed
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 

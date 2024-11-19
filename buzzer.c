@@ -3,6 +3,7 @@
 #include <math.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
+#include "include/buzzer.h"
 // ------ You do NOT need to edit this file ---------------------------
 // --------------------------------------------------------------------
 
