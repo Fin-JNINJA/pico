@@ -87,7 +87,7 @@ char* checkButton() {
 	return temp;
 }
 
-char checkTimeout() {
+char* checkTimeout() {
 	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
@@ -101,7 +101,6 @@ char checkTimeout() {
 			LED(1);
 			seven_segment_show(index + 1);
 			return alphabet[index];
-		}
 			//correct
 		}
 		memset(morse, 0, strlen(morse));
