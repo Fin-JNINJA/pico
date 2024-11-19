@@ -13,6 +13,7 @@ int notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
 bool keepActive = true;
+void buzzer_signal(int code); //idk if this is needed
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
@@ -35,6 +36,8 @@ int main() {
 	printf("hello!\n");
 
 	seven_segment_off();
+
+	buzzer_init();
 
 	while (keepActive) {
 		pressed = 0;
@@ -65,13 +68,16 @@ char* checkButton() {
 	char* temp;
 	if(pressedInitial) {
 		if (pressed < 250) {
-		printf("Button short\n");
-		temp = ".";
+			printf("Button short\n");
+			temp = ".";
+			buzzer_signal(1);
 		} else if (pressed >= 250 && pressed <= 700) {
 			printf("Button long\n");
 			temp = "-";
+			buzzer_signal(2);
 		} else {
 			temp = ",";
+			buzzer_signal(3);
 		}
 	}
 	return temp;
@@ -106,4 +112,29 @@ int decoder(int range) {
 		}
 	}
 	return -1;
+}
+
+void buzzer_signal(int code){
+	int multi = 2;
+	buzzer_init();
+	switch (code){
+		case 1:
+			buzzer_enable(200);
+			sleep_ms(multi*100);
+			break;
+		case 2:
+			buzzer_enable(200);
+			sleep_ms(multi*200);
+			break;
+		case 3:
+			buzzer_enable(200);
+			sleep_ms(multi*100);
+			buzzer_disable();
+			sleep_ms(50);
+			buzzer_init();
+			buzzer_enable(100);
+			sleep_ms(multi*100);
+			break;
+	}
+	buzzer_disable();
 }
