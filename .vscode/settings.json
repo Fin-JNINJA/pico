@@ -24,6 +24,7 @@
     "seven_segment.h": "c",
     "led.h": "c",
     "morse_code.h": "c",
-    "button.h": "c"
+    "button.h": "c",
+    "limits": "c"
   },
 }

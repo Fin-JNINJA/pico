@@ -82,7 +82,7 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	int range = 40 * potentiometer_read(5,10);
+	int range = 40 * potentiometer_read();
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
 		if(index < 0) {
@@ -136,12 +136,12 @@ void setup() {
 
 	buzzer_init();
 
-    printf("please set potentiometer level and press any button to continue");
+    printf("please set potentiometer level and press any button to continue\n");
 
     while(temp) {
-        if(temp_int != potentiometer_read(5,10)) {
-            temp_int == potentiometer_read(5,10);
-            printf("potentiometer is set to: %d %d\n",temp_int,potentiometer_read_raw());
+        if(potentiometer_read() != temp_int) {
+            temp_int = potentiometer_read();
+            printf("potentiometer is set to: %d %d\n",temp_int,potentiometer_read());
         }
         if(getButtonPress() || getButtonPress2()) {
             temp = false;
