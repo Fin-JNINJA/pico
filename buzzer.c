@@ -1,7 +1,7 @@
 #include <math.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
-#include "include/buzzer.h"
+#include "includes/buzzer.h"
 
 void buzzer_init() {
     gpio_init(BUZZER_PIN);
