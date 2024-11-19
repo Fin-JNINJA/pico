@@ -53,6 +53,7 @@ int main() {
 				if(getButtonPress()) {
 					valid_inputs = 0;
 					LED(1);
+					memset(word, 0, strlen(word));
 				}
 				if(getButtonPress2()) {
 					LED(2);

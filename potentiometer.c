@@ -3,7 +3,7 @@
 #include "hardware/adc.h"
 #include "includes/potentiometer.h"
 
-#define POTENTIOMETER_MIN       2025
+#define POTENTIOMETER_MIN       1
 #define POTENTIOMETER_MAX       4050
 
 void potentiometer_init() {
