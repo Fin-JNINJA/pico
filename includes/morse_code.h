@@ -6,4 +6,4 @@ void setup_rgb();
 
 char* checkButton();
 
-int checkTimeout();
+void checkTimeout();

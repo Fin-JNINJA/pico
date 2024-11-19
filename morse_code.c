@@ -54,13 +54,16 @@ int main() {
 		if (notPressed == 0 && pressedInitial) {
 			char* addition = checkButton();
 			strcat(morse, addition);
-			//printf("%s\n", morse); //Error checking i'm assuming?
+			printf("%s\n", morse); //Error checking i'm assuming?
+			if (addition == "-" || addition == ".") {
+				valid_inputs += 1;
+		}
 		}
 		notPressed++;
-		valid_inputs += checkTimeout();
+		checkTimeout();
 		sleep_ms(1);
 
-		if (valid_inputs == 4) {
+		if (valid_inputs >= 4) {
 			keepActive = false;
 		}
 	}
@@ -93,12 +96,10 @@ char* checkButton() {
 	return temp;
 }
 
-int checkTimeout() {
+void checkTimeout() {
 	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
-		printf("Index is: ");
-		printf("%d\n",index);
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
@@ -108,7 +109,6 @@ int checkTimeout() {
 			printf("%s\n", alphabet[index]);
 			LED(1);
 			seven_segment_show(index + 1);
-			return 1;
 			//correct
 		}
 		memset(morse, 0, strlen(morse));
@@ -116,7 +116,7 @@ int checkTimeout() {
 		sleep_ms(500);
 		seven_segment_off();
 	}
-	return 0;
+
 }
 
 int decoder(int range) {
