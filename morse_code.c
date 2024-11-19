@@ -63,7 +63,7 @@ int main() {
 				memset(word, 0, strlen(word));
 			}
 
-			if(getButtonPress2()) {
+			if(getButtonPressSecond()) {
 				LED(2);
 				exit(1);
 			}
@@ -168,7 +168,7 @@ void setup() {
             printf("timeout is set to: %dms \n",temp_int * 40);
         }
 
-        if(getButtonPress() || getButtonPress2()) {
+        if(getButtonPress() || getButtonPressSecond()) {
             temp = false;
         }
     }

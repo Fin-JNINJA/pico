@@ -8,4 +8,4 @@ void button_init();
 
 bool getButtonPress();
 
-bool getButtonPress2();
+bool getButtonPressSecond();

@@ -21,6 +21,6 @@ bool getButtonPress() {
     return gpio_get(BUTTON_PIN);
 }
 
-bool getButtonPress2() {
+bool getButtonPressSecond() {
     return gpio_get(BUTTON_PIN_SECOND);
 }
