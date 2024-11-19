@@ -51,6 +51,14 @@ unsigned int pwm_set_freq_duty(
 
 }
 
+void playExitSong() {
+	int song[9] = {831,659,831,932,1047,932,831,659,622};
+	for (unsigned int i = 0; i < 9; i++) {
+		buzzer_enable(song[i]);
+        sleep_ms(300);
+	}
+}
+
 void buzzer_signal(int code){
 	buzzer_init();
 	switch (code){
