@@ -14,6 +14,7 @@ bool pressedInitial = false;
 char morse[5] = "";
 char word[4] = "";
 bool keepActive = true;
+int valid_inputs = 0;
 void buzzer_signal(int code); //idk if this is needed
 
 char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
@@ -54,14 +55,15 @@ int main() {
 			strcat(morse, addition);
 			//printf("%s\n", morse);
 		}
-		strcat(word, checkTimeout());
 		notPressed++;
+		valid_inputs += checkTimeout();
 		sleep_ms(1);
-		if (word[3] != ""){
-			
+
+		if (valid_inputs == 4) {
+			keepActive = false;
 		}
 	}
-
+	printf("Program ended\n");
 
 	//endProgram();
 
@@ -87,7 +89,7 @@ char* checkButton() {
 	return temp;
 }
 
-char* checkTimeout() {
+int checkTimeout() {
 	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
@@ -100,7 +102,7 @@ char* checkTimeout() {
 			printf("%s\n", alphabet[index]);
 			LED(1);
 			seven_segment_show(index + 1);
-			return alphabet[index];
+			return 1;
 			//correct
 		}
 		memset(morse, 0, strlen(morse));
@@ -108,7 +110,7 @@ char* checkTimeout() {
 		sleep_ms(500);
 		seven_segment_off();
 	}
-	return "";
+	return 0;
 }
 
 int decoder(int range) {
