@@ -7,4 +7,4 @@ void potentiometer_init();
 
 unsigned int potentiometer_read_raw();
 
-unsigned int potentiometer_read();
+unsigned int potentiometer_read(int min, int max);
