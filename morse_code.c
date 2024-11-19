@@ -93,6 +93,8 @@ int checkTimeout() {
 	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
+		printf("Index is: ");
+		printf("%d\n",index);
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
