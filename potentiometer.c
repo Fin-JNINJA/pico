@@ -18,8 +18,8 @@ unsigned int potentiometer_read_raw() {
     return adc_read();
 }
 
-int map(
-    int value,
+double map(
+    double value,
     int original_min,
     int original_max,
     int min,
@@ -36,6 +36,6 @@ double clamp(int value, int min, int max) {
     return value;
 }
 
-unsigned int potentiometer_read() {
-    return round((clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX) / 4050) * 10);
+unsigned int potentiometer_read(int min, int max) {
+    return map(clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX), POTENTIOMETER_MIN, POTENTIOMETER_MAX, min, max);
 }
