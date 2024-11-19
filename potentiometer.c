@@ -33,9 +33,9 @@ int map(
 double clamp(int value, int min, int max) {
     if (value < min) return min;
     if (value > max) return max;
-    return (value / 4050) * 20;
+    return value;
 }
 
 unsigned int potentiometer_read() {
-    return clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX);
+    return (clamp(potentiometer_read_raw(), POTENTIOMETER_MIN, POTENTIOMETER_MAX) / 4050) * 20;
 }
