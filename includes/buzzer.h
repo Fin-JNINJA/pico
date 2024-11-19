@@ -9,10 +9,8 @@
 #define B3              247    
 #define C4              262 
 
-void buzzer_signal(int code);
-
 unsigned int pwm_set_freq_duty(
-    
+
     unsigned int slice,
 
     unsigned int channel,
@@ -27,3 +25,5 @@ void buzzer_init();
 void buzzer_disable();
 
 void buzzer_enable(unsigned int frequency);
+
+void buzzer_signal(int code);
