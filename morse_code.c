@@ -12,6 +12,7 @@ int pressed;
 int notPressed = 0;
 bool pressedInitial = false;
 char morse[5] = "";
+char word[4] = "";
 bool keepActive = true;
 void buzzer_signal(int code); //idk if this is needed
 
@@ -53,9 +54,12 @@ int main() {
 			strcat(morse, addition);
 			//printf("%s\n", morse);
 		}
-		checkTimeout();
+		strcat(word, checkTimeout());
 		notPressed++;
 		sleep_ms(1);
+		if (word[3] != ""){
+			
+		}
 	}
 
 
@@ -76,14 +80,14 @@ char* checkButton() {
 			temp = "-";
 			buzzer_signal(2);
 		} else {
-			temp = ",";
+			temp = ","; // should be blank instead of comma??? used to be comma
 			buzzer_signal(3);
 		}
 	}
 	return temp;
 }
 
-void checkTimeout() {
+char checkTimeout() {
 	int range = 40 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 		int index = decoder(range);
@@ -96,6 +100,8 @@ void checkTimeout() {
 			printf("%s\n", alphabet[index]);
 			LED(1);
 			seven_segment_show(index + 1);
+			return alphabet[index];
+		}
 			//correct
 		}
 		memset(morse, 0, strlen(morse));
@@ -103,6 +109,7 @@ void checkTimeout() {
 		sleep_ms(500);
 		seven_segment_off();
 	}
+	return "";
 }
 
 int decoder(int range) {
@@ -136,4 +143,10 @@ void buzzer_signal(int code){
 			break;
 	}
 	buzzer_disable();
+}
+
+void buddy_holly(){
+	buzzer_init();
+	buzzer_enable(400);
+	sleep_ms(100);
 }
