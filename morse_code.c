@@ -57,7 +57,7 @@ int main() {
 			printf("%s\n", morse); //Error checking i'm assuming?
 			if (addition == "-" || addition == ".") {
 				valid_inputs += 1;
-		}
+			}
 		}
 		notPressed++;
 		checkTimeout();
@@ -67,7 +67,6 @@ int main() {
 			keepActive = false;
 		}
 	}
-	printf("Program ended\n");
 
 	//endProgram();
 	/*Check if 4 valid inputs
