@@ -20,3 +20,7 @@ void button_init() {
 bool getButtonPress() {
     return gpio_get(BUTTON_PIN);
 }
+
+bool getButtonPress2() {
+    return gpio_get(BUTTON_PIN_SECOND);
+}

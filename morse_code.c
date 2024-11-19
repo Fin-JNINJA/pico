@@ -63,16 +63,18 @@ int main() {
 		checkTimeout();
 		sleep_ms(1);
 
-		if (valid_inputs >= 4) {
-			keepActive = false;
-		}
+		
+			while (valid_inputs >= 4) {
+				if(getButtonPress()) {
+					valid_inputs = 0;
+					LED(1);
+				}
+				if(getButtonPress2()) {
+					LED(2);
+					exit(1);
+				}
+			}
 	}
-
-	//endProgram();
-	/*Check if 4 valid inputs
-	  play buddy holly
-	  exit button becomes available*/
-
 
 }
 
