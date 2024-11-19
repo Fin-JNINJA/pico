@@ -141,7 +141,7 @@ void setup() {
     while(temp) {
         if(temp_int != potentiometer_read(5,10)) {
             temp_int == potentiometer_read(5,10);
-            printf("potentiometer is set to: %d",temp_int * 40);
+            printf("potentiometer is set to: %d %d\n",temp_int,potentiometer_read_raw());
         }
         if(getButtonPress() || getButtonPress2()) {
             temp = false;

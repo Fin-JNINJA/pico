@@ -27,7 +27,8 @@ int map(
 ) {
     int original_range = original_max - original_min;
     int range = max - min;
-
+    printf(original_range);
+    printf(value);
     return (value - original_min) * range / original_range + min;
 }
 
