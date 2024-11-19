@@ -115,25 +115,24 @@ int decoder(int range) {
 }
 
 void buzzer_signal(int code){
-	int multi = 2;
 	buzzer_init();
 	switch (code){
 		case 1:
-			buzzer_enable(200);
-			sleep_ms(multi*100);
+			buzzer_enable(1047);
+			sleep_ms(100);
 			break;
 		case 2:
-			buzzer_enable(200);
-			sleep_ms(multi*200);
+			buzzer_enable(1047);
+			sleep_ms(250);
 			break;
 		case 3:
 			buzzer_enable(200);
-			sleep_ms(multi*100);
+			sleep_ms(100);
 			buzzer_disable();
 			sleep_ms(50);
 			buzzer_init();
 			buzzer_enable(100);
-			sleep_ms(multi*100);
+			sleep_ms(100);
 			break;
 	}
 	buzzer_disable();
