@@ -4,12 +4,14 @@
 #include "includes/buzzer.h"
 
 void buzzer_init() {
+    //initialising buzzer
     gpio_init(BUZZER_PIN);
     gpio_set_dir(BUZZER_PIN, GPIO_OUT);
     gpio_set_function(BUZZER_PIN, GPIO_FUNC_PWM);
 }
-// disable the buzzer pin to stop the sound
+
 void buzzer_disable() {
+    // disable the buzzer pin to stop the sound
     gpio_deinit(BUZZER_PIN);
 }
 
@@ -52,6 +54,7 @@ unsigned int pwm_set_freq_duty(
 }
 
 void playExitSong() {
+    //cycles through a list of freqencies to get played on the buzzer
     buzzer_init();
 	int song[9] = {831,659,831,932,1047,932,831,659,622};
 	for (unsigned int i = 0; i < 9; i++) {
@@ -62,6 +65,7 @@ void playExitSong() {
 }
 
 void buzzer_signal(int code){
+    //indicator tones for input validation
 	buzzer_init();
 	switch (code){
 		case 1:

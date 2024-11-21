@@ -1,5 +1,5 @@
 #include <math.h>
-#include "pico/stdlib.h"
+//#include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "includes/potentiometer.h"
 
