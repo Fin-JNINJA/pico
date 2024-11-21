@@ -100,7 +100,6 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
-			if()
 			buzzer_signal(3);
 			seven_segment_show(27);
 			//handles error
