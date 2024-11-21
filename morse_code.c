@@ -159,14 +159,14 @@ void setup() {
 
 	LED(0);
 
-    printf("Hello!\nplease set potentiometer level and press any button to continue\n");
+    printf("Hello!\n\n\n\nPlease set potentiometer level and press any button to continue\n");
 
     while(temp) {
 		int read = potentiometer_read(5,10);
 
         if(temp_int != read) {
             temp_int = read;
-            printf("timeout is set to: %dms \n",temp_int * 40);
+            printf("Timeout is set to: %dms \n",temp_int * 40);
         }
 
         if(getButtonPress() || getButtonPressSecond()) {
