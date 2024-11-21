@@ -158,7 +158,7 @@ void setup() {
 
 	LED(0);
 
-    printf("Hello!\n\n\n\nPlease set potentiometer level and press any button to continue\n");
+    printf("\n\n\n\n\nHello! Welcome to this morse code decoder:\nPlease set potentiometer level and press any button to continue\n");
 
     while(temp) {
 		int read = potentiometer_read(5,10);
