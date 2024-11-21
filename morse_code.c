@@ -1,7 +1,6 @@
 //imports
 #include <stdio.h>
 #include <string.h>
-#include "includes/pthread.h"
 #include "pico/stdlib.h"
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
@@ -57,9 +56,7 @@ int main() {
 		while (valid_inputs >= 4) { // end loop
 			if(getButtonPress()) {
 				valid_inputs = 0;
-				pthread_t LED_id;
-				pthread_create(&LED_id, NULL, LED, 1);
-				
+				LED(1);
 				memset(word, 0, strlen(word));
 			}
 
@@ -75,22 +72,21 @@ char* checkButton() {
 	char* temp;
 
 	if(pressedInitial) {
-		pthread_t buzzer_id;
 		if (pressed < 250) {
 			printf("Button short\n");
 			temp = ".";
-			pthread_create(&buzzer_id, NULL, buzzer_signal, 1);
+			buzzer_signal(1);
 		}
 		
 		else if (pressed >= 250 && pressed <= 700) {
 			printf("Button long\n");
 			temp = "-";
-			pthread_create(&buzzer_id, NULL, buzzer_signal, 2);
+			buzzer_signal(2);
 		}
 		
 		else {
 			temp = ",";
-			pthread_create(&buzzer_id, NULL, buzzer_signal, 3);
+			buzzer_signal(3);
 		}
 	}
 
@@ -102,27 +98,26 @@ void checkTimeout() {
 	if (notPressed >= range && pressedInitial) {
 
 		int index = decoder(range);
-		pthread_t LED_id;
-		pthread_t seven_id;
+
 		if(index < 0) {
 			printf("8\n");
-			pthread_create(&LED_id, NULL, LED, 2);
-			pthread_create(&LED_id, NULL, display_screen, 27);
+			LED(2);
+			seven_segment_show(27);
 			//handles error
 		}
 		
 		else {
 			printf("%s\n", alphabet[index]);
 			strcat(word,alphabet[index]);
-			pthread_t LED_id;
-			pthread_t seven_id;
-			pthread_create(&LED_id, NULL, LED, 1);
-			pthread_create(&LED_id, NULL, display_screen, index + 1);
+			LED(1);
+			seven_segment_show(index + 1);
 			//handles response
 		}
 
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
+		sleep(400);
+		seven_segment_off();
 	}
 
 }
