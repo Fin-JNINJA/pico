@@ -1,6 +1,6 @@
 #include "includes/seven_segment.h"
-#include <stdio.h>
-#include "pico/stdlib.h"
+//#include <stdio.h>
+//#include "pico/stdlib.h"
 
 void seven_segment_init() {
     for (unsigned int i = 0; i < ALL_SEGMENTS_COUNT; i++) {

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
 
@@ -44,6 +43,7 @@ void show_rgb(int r, int g, int b)
 }
 
 void LED(int num) {
+    //led input validation colours
     switch(num) {
         case 1:
             show_rgb(0,255,0);
