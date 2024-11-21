@@ -141,17 +141,21 @@ void setup() {
 
 	stdio_init_all();
 
-	button_init();
-
-	seven_segment_init();
-
 	potentiometer_init();
 
 	setup_rgb();
 
-	seven_segment_off();
-
 	buzzer_init();
+
+	button_init();
+
+	seven_segment_init();
+
+	seven_segment_show(27);
+
+	sleep_ms(200);
+
+	seven_segment_off();
 
     printf("Hello!\nplease set potentiometer level and press any button to continue\n");
 
