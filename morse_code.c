@@ -93,10 +93,10 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	int range = 400 * potentiometer_value;
-	if (notPressed >= range && pressedInitial) {
+	int range = 400 * potentiometer_value; // sets time based on potentiometer value set at beginning of program
+	if (notPressed >= range && pressedInitial) { // returns true if the button hasnt been prressed for more than the range and button has been pressed at least once
 
-		int index = decoder(range);
+		int index = decoder(range); // returns a value from 0 - 25 if decoder finds matches a morse string to a letter or returns -1 if no match is found
 
 		if(index < 0) {
 			printf("8\n");
