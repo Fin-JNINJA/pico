@@ -165,7 +165,7 @@ void setup() {
 
         if(temp_int != read) {
             temp_int = read;
-            printf("Timeout is set to: %dms \n",temp_int * 40);
+            printf("Timeout is set to: %dms \n",temp_int * 400);
         }
 
         if(getButtonPress() || getButtonPressSecond()) {
