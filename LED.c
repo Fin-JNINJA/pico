@@ -1,7 +1,6 @@
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
 
-//Define pin numbers
 #define R 13 
 #define G 12 
 #define B 11 
@@ -14,9 +13,10 @@ void setup_rgb()
     gpio_set_function(B, GPIO_FUNC_PWM);
 
     // Figure out which slice we just connected to the LED pin, this is done for the other colors below
+    uint slice_num = pwm_gpio_to_slice_num(R);
     // Get the defaults for the slice configuration. By default, the
     // counter is allowed to wrap over its maximum range
-    uint slice_num = pwm_gpio_to_slice_num(R);
+
     pwm_config config = pwm_get_default_config();
     // Load the configuration into our PWM slice, and set it running.
     pwm_init(slice_num, &config, true);
@@ -26,7 +26,6 @@ void setup_rgb()
 
     slice_num = pwm_gpio_to_slice_num(B);
     pwm_init(slice_num, &config, true);
-
 }
 
 void show_rgb(int r, int g, int b)
@@ -58,4 +57,5 @@ void LED(int num) {
             show_rgb(0,0,0);
             break;
     }
+    return;
 }
