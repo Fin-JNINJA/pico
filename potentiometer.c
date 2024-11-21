@@ -11,9 +11,7 @@ void potentiometer_init() {
 }
 
 unsigned int potentiometer_read_raw() {
-
     adc_select_input(POTENTIOMETER_PIN - 26);
-
     return adc_read();
 }
 
