@@ -60,7 +60,7 @@ int main() {
 				LED(3); // LED flashes red
 				playExitApple();
 				//exit(1);
-				system("shutdown now");
+				system("sudo shutdown -h now");
 			}
 		}
 	}
