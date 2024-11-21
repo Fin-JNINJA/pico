@@ -138,6 +138,8 @@ int setup() {
 
     timer_hw->dbgpause = 0;
 
+	// turns on all components
+
 	stdio_init_all();
 
 	potentiometer_init();
@@ -160,10 +162,10 @@ int setup() {
 
     printf("\n\n\n\n\nHello! Welcome to this morse code decoder:\nPlease set potentiometer level and press left button to continue or right button to set deault (4000ms)\n");
 
-    while(temp) {
-		int read = potentiometer_read(5,10);
+    while(temp) { // while temp is true, loop
+		int read = potentiometer_read(5,10); // returns clamped value of the potentiometer between 5 and 10
 
-        if(temp_int != read) {
+        if(temp_int != read) { // if potentiometer value and temp_int are different, then set temp_int to potentiometer
             temp_int = read;
             printf("Timeout is set to: %dms \n",temp_int * 400);
         }
