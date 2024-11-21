@@ -28,13 +28,14 @@ int main() {
 
 
 	while (keepActive) { // main loop
-		
+		buzzer_disable();
 		pressed = 0; // stores time while button is pressed in ms
 
 		while (getButtonPress()) { // starts while loop when main button is pressed
 			notPressed = 0; // stores time while button is not pressed in ms
 			pressedInitial = true; // sets the fact the button has been pressed for the first time
 			pressed++; // increments every ms while button is pressed
+			buzzer_signal(1);
 			sleep_ms(1);
 		}
 
@@ -75,13 +76,11 @@ char* checkButton() {
 		if (pressed < 250) { // checks to see if the time in ms that the button has been pressed for is less than 250 ms
 			printf("Button short\n");
 			temp = ".";
-			buzzer_signal(1);
 		}
 		
 		else if (pressed >= 250 && pressed <= 700) {
 			printf("Button long\n");
 			temp = "-";
-			buzzer_signal(2);
 		}
 		
 		else {
@@ -102,6 +101,7 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
+			buzzer_signal(3);
 			seven_segment_show(27);
 			//handles error
 		}
