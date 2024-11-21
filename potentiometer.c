@@ -17,25 +17,19 @@ unsigned int potentiometer_read_raw() {
     return adc_read();
 }
 
-double map(
-    double value,
-    int original_min,
-    int original_max,
-    int min,
-    int max
-) {
-    int original_range = original_max - original_min;
-    int range = max - min;
-    return (value - original_min) * range / original_range + min;
+double map(double value, int original_min, int original_max, int min, int max) {
+    int original_range = original_max - original_min; // finds the range between the min and max of the potentiometer
+    int range = max - min; // finds the range between the min and max output
+    return (value - original_min) * range / original_range + min; // returns the new value in the limits of the new min and max
 }
 
-double clamp(int value, int min, int max) {
+double clamp(int value, int min, int max) { // clamps the values of the potentiometer to be within the min and max range
     if (value < min) return min;
     if (value > max) return max;
     return value;
 }
 
-unsigned int potentiometer_read(int min, int max) {
+unsigned int potentiometer_read(int min, int max) { // reads potentiometer
     return map(
         clamp(
             potentiometer_read_raw(), 
