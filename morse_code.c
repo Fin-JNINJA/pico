@@ -57,8 +57,8 @@ int main() {
 				memset(word, 0, strlen(word)); //resets the value of word back to "" using the memory adress
 			}
 			if(getButtonPressSecond()) { // returns true if the second button input is pressed
-				playExitApple();
 				LED(3); // LED flashes red
+				playExitApple();
 				exit(1);
 			}
 		}
@@ -138,7 +138,7 @@ int setup() {
 	setup_rgb();
 	LED(0);
 
-    printf("\n\n\n\n\nHello! Welcome to this morse code decoder:\nPlease set potentiometer level and press left button to continue or right button to set deault (4000ms)\n");
+    printf("\n\n\n\n\nHello! Welcome to this morse code decoder:\nPlease set potentiometer level and press left button to continue or right button to set default (4000ms)\n");
 
     while(temp) { // while temp is true, loop
 		int read = potentiometer_read(5,10); // returns clamped value of the potentiometer between 5 and 10
@@ -153,6 +153,7 @@ int setup() {
 		if(getButtonPressSecond()) {
 			temp = false;
 			temp_int = 10;
+			printf("Default selected (4 seconds)\n");
 		}
     }
 	return temp_int;

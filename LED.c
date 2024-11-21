@@ -46,17 +46,17 @@ void LED(int num) {
     //led input validation colours
     switch(num) {
         case 1: //A valid input turns the LED green
-            show_rgb(0,1,0);
+            show_rgb(0,255,0);
             sleep_ms(20);
             LED(0);
             break;
         case 2://An invalid input turns the LED RED
-            show_rgb(1,0,0);
+            show_rgb(255,0,0);
             sleep_ms(20);
             LED(0);
             break;
         case 3://The exit LED stays on for longer
-            show_rgb(1,0,0);
+            show_rgb(255,0,0);
             sleep_ms(500);
             LED(0);
             break;

@@ -59,6 +59,7 @@ void playExitSong() {
 }
 
 void playExitApple() {
+    buzzer_init();
     for (int note = 0; note < 400; note+=2){
         buzzer_enable(apple[note+1]);
         sleep_ms(apple[note]);
