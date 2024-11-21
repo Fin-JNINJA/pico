@@ -37,21 +37,21 @@ void setup_rgb()
 // Then scale it by brightness (out of 100) and invert the value (LED low is ON).
 void show_rgb(int r, int g, int b)
 {
-    pwm_set_gpio_level(R, ~(MAX_PWM_LEVEL * r / MAX_COLOUR_VALUE * BRIGHTNESS / 100));
-    pwm_set_gpio_level(G, ~(MAX_PWM_LEVEL * g / MAX_COLOUR_VALUE * BRIGHTNESS / 100));
-    pwm_set_gpio_level(B, ~(MAX_PWM_LEVEL * b / MAX_COLOUR_VALUE * BRIGHTNESS / 100));
+    pwm_set_gpio_level(R, ~r);
+    pwm_set_gpio_level(G, ~g);
+    pwm_set_gpio_level(B, ~b);
 }
 
 void LED(int num) {
     //led input validation colours
     switch(num) {
         case 1:
-            show_rgb(0,255,0);
+            show_rgb(0,65535,0);
             sleep_ms(20);
             LED(0);
             break;
         case 2:
-            show_rgb(255,0,0);
+            show_rgb(65535,0,0);
             sleep_ms(20);
             LED(0);
             break;
@@ -59,5 +59,5 @@ void LED(int num) {
             show_rgb(0,0,0);
             break;
     }
-    return NULL;
+    return;
 }
