@@ -8,4 +8,4 @@ char* checkButton();
 
 void checkTimeout();
 
-void setup();
+int setup();
