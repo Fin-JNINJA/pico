@@ -3,6 +3,7 @@
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
 #include "includes/buzzer.h"
+#include "includes/badapple.h"
 
 void buzzer_init() {
     //initialising buzzer
@@ -58,15 +59,10 @@ void playExitSong() {
 }
 
 void playExitApple() {
-    FILE *fptr;
-    fptr  = fopen("swaws.txt", "r"); // read only
-    char line[11];
-    if (fptr == NULL) {
-    printf("Failed to open file.\n");
+    for (int note = 0, note < song.length, note++){
+        buzzer_enable(song[note][1]);
+        sleep_ms(song[note][0]);
     }
-    printf("cheese");
-	printf(fgets( line, 11, fptr));
-    printf("brain");
 
 }
 
