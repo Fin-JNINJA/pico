@@ -1,4 +1,5 @@
 #include <math.h>
+#include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
 #include "includes/buzzer.h"
@@ -58,7 +59,15 @@ void playExitSong() {
 
 void playExitApple() {
     FILE *fptr;
-    FILE *fptr  = fopen("text brrr", "r"); // read only
+    fptr  = fopen("swaws.txt", "r"); // read only
+    char line[11];
+    if (fptr == NULL) {
+    printf("Failed to open file.\n");
+    }
+    printf("cheese");
+	printf(fgets( line, 11, fptr));
+    printf("brain");
+
 }
 
 void buzzer_signal(int code){
