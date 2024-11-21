@@ -159,7 +159,7 @@ int setup() {
 
 	LED(0);
 
-    printf("Hello!\n\n\n\nPlease set potentiometer level and press any button to continue\n");
+    printf("Hello!\n\n\n\nPlease set potentiometer level and press left button to continue or right button to set deault (4000ms)\n");
 
     while(temp) {
 		int read = potentiometer_read(5,10);
