@@ -116,7 +116,7 @@ void checkTimeout() {
 
 		memset(morse, 0, strlen(morse));
 		pressedInitial = false;
-		sleep(400);
+		sleep_ms(400);
 		seven_segment_off();
 	}
 
