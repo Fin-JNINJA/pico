@@ -59,7 +59,8 @@ int main() {
 			if(getButtonPressSecond()) { // returns true if the second button input is pressed
 				LED(3); // LED flashes red
 				playExitApple();
-				exit(1);
+				//exit(1);
+				system("shutdown now");
 			}
 		}
 	}
