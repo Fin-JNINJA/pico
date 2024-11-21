@@ -1,7 +1,7 @@
 //imports
 #include <stdio.h>
 #include <string.h>
-#include <pthread.h>
+#include "includes/pthread.h"
 #include "pico/stdlib.h"
 #include "includes/seven_segment.h"
 #include "includes/buzzer.h"
