@@ -41,7 +41,7 @@ int main() {
 
 		if (notPressed == 0 && pressedInitial) { // returns true if button has been pressed
 			char* addition = checkButton(); // returns a symbol based on the time the button has been held for
-			strcat(morse, addition); // concatinates the morse string with the output from checkbutton()
+			strcat(morse, addition); // concatenates the morse string with the output from checkbutton()
 			printf("%s\n", morse);
 		}
 
@@ -75,16 +75,21 @@ char* checkButton() {
 	if(pressedInitial) { // prevents the other branches from being checked unless the button has been pressed at least once
 		if (pressed < 250) { // checks to see if the time in ms that the button has been pressed for is less than 250 ms
 			printf("Button short\n");
-			temp = ".";
+			temp = "."; // returns a . to be processed by the decoder
 		}
 		
-		else if (pressed >= 250 && pressed <= 700) {
+		else if (pressed >= 250 && pressed <= 700) { // checks to see if the time is between 250ms and 700ms
 			printf("Button long\n");
-			temp = "-";
+			temp = "-"; // returns a - to be processed by the decoder
 		}
 		
 		else {
+<<<<<<< HEAD
 			temp = ",";
+=======
+			temp = ","; // returns a , to be processed by the decoderwhich will fire an error code
+			buzzer_signal(3); // 
+>>>>>>> faa2bfb9b91bca52cd90a29403a159b2b62672ee
 		}
 	}
 
@@ -100,6 +105,7 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
+			if()
 			buzzer_signal(3);
 			seven_segment_show(27);
 			//handles error
