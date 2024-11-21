@@ -98,38 +98,37 @@ void checkTimeout() {
 
 		int index = decoder(range); // returns a value from 0 - 25 if decoder finds matches a morse string to a letter or returns -1 if no match is found
 
-		if(index < 0) {
+		if(index < 0) { // returns true if the value returned from decoder is a -1
 			printf("8\n");
-			LED(2);
-			buzzer_signal(3);
-			seven_segment_show(27);
-			//handles error
+			LED(2); // led flashes red
+			buzzer_signal(3); // buzzer plays error sound
+			seven_segment_show(27); // segment shows 8
+			// branch handles error
 		}
 		
 		else {
 			printf("%s\n", alphabet[index]);
-			strcat(word,alphabet[index]);
-			LED(1);
-			seven_segment_show(index + 1);
-			//handles response
+			strcat(word,alphabet[index]); // concatinates the found letter to the total word
+			LED(1); // led flashes green
+			seven_segment_show(index + 1); // segment shows letter of the alphabet
+			//branch handles response
 		}
 
-		memset(morse, 0, strlen(morse));
-		pressedInitial = false;
+		memset(morse, 0, strlen(morse)); // resets the morse value to ""
+		pressedInitial = false; // tells program that button hasnt been pressed at all for the next letter
 		sleep_ms(400);
 		seven_segment_off();
 	}
-
 }
 
 int decoder(int range) {
-	for(int i = 0; i < sizeof(morseCode) / 4; i++) {
-		if(strcmp(morseCode[i], morse) == 0 && notPressed < (range + 1)) {
-			valid_inputs++;
-			return i;
+	for(int i = 0; i < sizeof(morseCode) / 4; i++) { // loops for every string in the morseCode array
+		if(strcmp(morseCode[i], morse) == 0 && notPressed < (range + 1)) { // returns true if morsecode is == morse and the button hasnt been pressed for less than the potentiometer range in ms
+			valid_inputs++; // increments the amount of valid inputs from the user
+			return i; // returns the index of the morse code string found in the alphabet array
 		}
 	}
-	return -1;
+	return -1; // returns an error code
 }
 
 int setup() {
