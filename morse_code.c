@@ -63,7 +63,7 @@ int main() {
 			}
 
 			if(getButtonPressSecond()) { // returns true if the second button input is pressed
-				LED(2); // LED flashes red
+				LED(3); // LED flashes red
 				exit(1);
 			}
 		}

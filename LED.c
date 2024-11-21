@@ -55,6 +55,11 @@ void LED(int num) {
             sleep_ms(20);
             LED(0);
             break;
+        case 3:
+            show_rgb(255,0,0);
+            sleep_ms(500);
+            LED(0);
+            break;
         default:
             show_rgb(0,0,0);
             break;
