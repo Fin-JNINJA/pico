@@ -29,4 +29,3 @@ unsigned void seven_segment_show(unsigned int number) {
         );
     }
 }
-

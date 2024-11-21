@@ -23,7 +23,6 @@ void buzzer_enable(unsigned int frequency) {
         frequency,                                  // Frequency in Hz (as specified)
         0.1                                        // Duty cycle = 0.1 (max volume = 0.5)
     );
-
     pwm_set_enabled(pwm_gpio_to_slice_num(BUZZER_PIN), true);
 }
 
@@ -37,20 +36,13 @@ unsigned int pwm_set_freq_duty(
 ) {
 
     unsigned int clock = 125000000;
-    
     unsigned int divider16 = ceil(clock / (frequency * (double) 4096));
-
     if (divider16 < 16) divider16 = 16;
-    
     unsigned int wrap = (clock * 16 / divider16 / frequency) - 1;
-
     pwm_set_clkdiv_int_frac(slice, divider16 / 16, divider16 & 0xF);
-
     pwm_set_wrap(slice, wrap);
     pwm_set_chan_level(slice, channel, wrap * duty);
-
     return wrap;
-
 }
 
 void playExitSong() {
@@ -87,5 +79,4 @@ void buzzer_signal(int code){
 			buzzer_enable(1047);
 			break;
 	}
-    return NULL;
 }
