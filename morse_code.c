@@ -84,9 +84,6 @@ char* checkButton() {
 		}
 		
 		else {
-<<<<<<< HEAD
-			temp = ",";
-=======
 			temp = ","; // returns a , to be processed by the decoderwhich will fire an error code
 		}
 	}
