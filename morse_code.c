@@ -23,7 +23,15 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 
 
 int main() {
-debug tarts while loop when main button is pressed
+
+	setup(); // initializes circuits and allows user to change potentiometer
+
+
+	while (keepActive) { // main loop
+		buzzer_disable();
+		pressed = 0; // stores time while button is pressed in ms
+
+		while (getButtonPress()) { // starts while loop when main button is pressed
 			notPressed = 0; // stores time while button is not pressed in ms
 			pressedInitial = true; // sets the fact the button has been pressed for the first time
 			pressed++; // increments every ms while button is pressed
