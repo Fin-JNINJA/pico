@@ -136,6 +136,7 @@ int setup() {
 	seven_segment_off();
 	setup_rgb();
 	LED(0);
+	playExitApple();
 
     printf("\n\n\n\n\nHello! Welcome to this morse code decoder:\nPlease set potentiometer level and press left button to continue or right button to set deault (4000ms)\n");
 
