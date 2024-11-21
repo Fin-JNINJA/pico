@@ -30,7 +30,7 @@ void setup_rgb()
 
 }
 
-void show_rgb(int r, int g)
+void show_rgb(int r, int g, int b)
 {
     pwm_set_gpio_level(R, ~r*65535);
     pwm_set_gpio_level(G, ~g*65535);
