@@ -59,11 +59,11 @@ void playExitSong() {
 }
 
 void playExitApple() {
-    for (int note = 0, note < sizeof(apple), note+=2){
-        buzzer_enable(apple[note]);
-        sleep_ms(apple[note+1]);
+    for (int note = 0; note < 400; note+=2){
+        buzzer_enable(apple[note+1]);
+        sleep_ms(apple[note]);
     }
-
+    buzzer_disable();
 }
 
 void buzzer_signal(int code){
