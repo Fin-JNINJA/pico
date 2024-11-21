@@ -18,13 +18,14 @@ char morse[5] = "";
 char word[5] = "";
 bool keepActive = true;
 int valid_inputs = 0;
-char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
-char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+int potentiometer_value = 0;
+const char morseCode[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+const char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
 
 int main() {
 
-	setup(); // initializes circuits and allows user to change potentiometer
+	potentiometer_value = setup(); // initializes circuits and allows user to change potentiometer
 
 
 	while (keepActive) { // main loop
@@ -92,7 +93,7 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	int range = 400 * potentiometer_read(5,10);
+	int range = 400 * potentiometer_value;
 	if (notPressed >= range && pressedInitial) {
 
 		int index = decoder(range);
@@ -100,7 +101,6 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
-			if()
 			buzzer_signal(3);
 			seven_segment_show(27);
 			//handles error
@@ -132,7 +132,7 @@ int decoder(int range) {
 	return -1;
 }
 
-void setup() {
+int setup() {
 
     bool temp = true;
     int temp_int = 0;
@@ -159,7 +159,7 @@ void setup() {
 
 	LED(0);
 
-    printf("Hello!\n\n\n\nPlease set potentiometer level and press any button to continue\n");
+    printf("Hello!\n\n\n\nPlease set potentiometer level and press left button to continue or rigght button to set deault (4000ms)\n");
 
     while(temp) {
 		int read = potentiometer_read(5,10);
@@ -169,10 +169,16 @@ void setup() {
             printf("Timeout is set to: %dms \n",temp_int * 400);
         }
 
-        if(getButtonPress() || getButtonPressSecond()) {
+        if(getButtonPress()) {
             temp = false;
         }
+		if(getButtonPressSecond()) {
+			temp = false;
+			temp_int = 10;
+		}
     }
+
+	return temp_int;
 }
 
 
