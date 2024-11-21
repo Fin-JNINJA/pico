@@ -151,7 +151,7 @@ void setup() {
 
 	seven_segment_show(27);
 
-	sleep_ms(200);
+	sleep_ms(1000);
 
 	seven_segment_off();
 
