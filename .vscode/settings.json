@@ -25,6 +25,7 @@
     "led.h": "c",
     "morse_code.h": "c",
     "button.h": "c",
-    "limits": "c"
+    "limits": "c",
+    "pwm.h": "c"
   },
 }

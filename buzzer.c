@@ -64,6 +64,11 @@ void playExitSong() {
     buzzer_disable();
 }
 
+void playExitApple() {
+    FILE *fptr;
+    FILE *fptr  = fopen("text brrr", "r"); // read only
+}
+
 void buzzer_signal(int code){
     //indicator tones for input validation
 	buzzer_init();
