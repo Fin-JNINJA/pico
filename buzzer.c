@@ -68,14 +68,6 @@ void buzzer_signal(int code){
     //indicator tones for input validation
 	buzzer_init();
 	switch (code){
-		case 1:
-			buzzer_enable(1047);
-			sleep_ms(100);
-			break;
-		case 2:
-			buzzer_enable(1047);
-			sleep_ms(250);
-			break;
 		case 3:
 			buzzer_enable(200);
 			sleep_ms(100);
@@ -84,8 +76,11 @@ void buzzer_signal(int code){
 			buzzer_init();
 			buzzer_enable(100);
 			sleep_ms(100);
+            buzzer_disable();
+			break;
+        default:
+			buzzer_enable(1047);
 			break;
 	}
-	buzzer_disable();
     return NULL;
 }
