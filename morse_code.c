@@ -75,17 +75,17 @@ char* checkButton() {
 	if(pressedInitial) { // prevents the other branches from being checked unless the button has been pressed at least once
 		if (pressed < 250) { // checks to see if the time in ms that the button has been pressed for is less than 250 ms
 			printf("Button short\n");
-			temp = ".";
+			temp = "."; // returns a . to be processed by the decoder
 		}
 		
-		else if (pressed >= 250 && pressed <= 700) {
+		else if (pressed >= 250 && pressed <= 700) { // checks to see if the time is between 250ms and 700ms
 			printf("Button long\n");
-			temp = "-";
+			temp = "-"; // returns a - to be processed by the decoder
 		}
 		
 		else {
-			temp = ",";
-			buzzer_signal(3);
+			temp = ","; // returns a , to be processed by the decoderwhich will fire an error code
+			buzzer_signal(3); // 
 		}
 	}
 
@@ -101,6 +101,7 @@ void checkTimeout() {
 		if(index < 0) {
 			printf("8\n");
 			LED(2);
+			if()
 			buzzer_signal(3);
 			seven_segment_show(27);
 			//handles error
