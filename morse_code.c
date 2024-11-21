@@ -41,7 +41,7 @@ int main() {
 
 		if (notPressed == 0 && pressedInitial) { // returns true if button has been pressed
 			char* addition = checkButton(); // returns a symbol based on the time the button has been held for
-			strcat(morse, addition); // concatinates the morse string with the output from checkbutton()
+			strcat(morse, addition); // concatenates the morse string with the output from checkbutton()
 			printf("%s\n", morse);
 		}
 
