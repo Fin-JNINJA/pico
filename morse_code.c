@@ -143,8 +143,6 @@ void setup() {
 
 	potentiometer_init();
 
-	setup_rgb();
-
 	buzzer_init();
 
 	button_init();
@@ -156,6 +154,10 @@ void setup() {
 	sleep_ms(200);
 
 	seven_segment_off();
+
+	setup_rgb();
+
+	LED(0);
 
     printf("Hello!\nplease set potentiometer level and press any button to continue\n");
 
