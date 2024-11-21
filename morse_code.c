@@ -85,7 +85,6 @@ char* checkButton() {
 		
 		else {
 			temp = ",";
-			buzzer_signal(3);
 		}
 	}
 
