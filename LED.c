@@ -15,6 +15,8 @@ void setup_rgb()
 
     // Figure out which slice we just connected to the LED pin, this is done for the other colors below
     uint slice_num = pwm_gpio_to_slice_num(R);
+    uint slice_num = pwm_gpio_to_slice_num(G);
+    uint slice_num = pwm_gpio_to_slice_num(B);
     // Get the defaults for the slice configuration. By default, the
     // counter is allowed to wrap over its maximum range
 
