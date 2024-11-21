@@ -61,9 +61,10 @@ void playExitSong() {
     buzzer_disable();
 }
 
-void* buzzer_signal(int* code){
+void* buzzer_signal(void* code){
+    int val = *(int*)code;
 	buzzer_init();
-	switch (code){
+	switch (val){
 		case 1:
 			buzzer_enable(1047);
 			sleep_ms(100);

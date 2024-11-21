@@ -43,8 +43,9 @@ void show_rgb(int r, int g, int b)
     pwm_set_gpio_level(B, ~(MAX_PWM_LEVEL * b / MAX_COLOUR_VALUE * BRIGHTNESS / 100));
 }
 
-void* LED(int* num) {
-    switch(num) {
+void* LED(void* num) {
+    int val = *(int*)num;
+    switch(val) {
         case 1:
             show_rgb(0,255,0);
             sleep_ms(20);
