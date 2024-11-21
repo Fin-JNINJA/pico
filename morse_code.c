@@ -158,7 +158,7 @@ void setup() {
     while(temp) {
 		int read = potentiometer_read(5,10);
 
-        if(!(temp_int > read - 1) && !(temp_int < read + 1)) {
+        if((temp_int > read - 1) && (temp_int < read + 1)) {
             temp_int = read;
             printf("timeout is set to: %dms \n",temp_int * 40);
         }
