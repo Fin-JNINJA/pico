@@ -92,7 +92,7 @@ char* checkButton() {
 }
 
 void checkTimeout() {
-	int range = 40 * potentiometer_read(5,10);
+	int range = 400 * potentiometer_read(5,10);
 	if (notPressed >= range && pressedInitial) {
 
 		int index = decoder(range);
