@@ -24,44 +24,44 @@ char* alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 
 int main() {
 
-	setup(); // initializes circuits 
+	setup(); // initializes circuits and allows user to change potentiometer
 
 
 	while (keepActive) { // main loop
 		
-		pressed = 0;
+		pressed = 0; // stores time while button is pressed in ms
 
-		while (getButtonPress()) {
-			notPressed = 0;
-			pressedInitial = true;
-			pressed++;
+		while (getButtonPress()) { // starts while loop when main button is pressed
+			notPressed = 0; // stores time while button is not pressed in ms
+			pressedInitial = true; // sets the fact the button has been pressed for the first time
+			pressed++; // increments every ms while button is pressed
 			sleep_ms(1);
 		}
 
-		if (notPressed == 0 && pressedInitial) {
-			char* addition = checkButton();
-			strcat(morse, addition);
+		if (notPressed == 0 && pressedInitial) { // returns true if button has been pressed
+			char* addition = checkButton(); // returns a symbol based on the time the button has been held for
+			strcat(morse, addition); // concatinates the morse string with the output from checkbutton()
 			printf("%s\n", morse);
 		}
 
-		notPressed++;
-		checkTimeout();
+		notPressed++; // increments every ms while button is not being pressed
+		checkTimeout(); // checks to see if the time between inputs is greater than the set timeout for the inputs to be decoded
 		sleep_ms(1);
 
-		if (valid_inputs >= 4) {
-			playExitSong();
+		if (valid_inputs >= 4) { // returns true if the amount of valid inputs equals or exceeds 4
+			playExitSong(); //plays an exit song
 			printf("Your word is:  %s\nWould you like to leave?\n",word);
 		}
 
-		while (valid_inputs >= 4) { // end loop
-			if(getButtonPress()) {
-				valid_inputs = 0;
-				LED(1);
-				memset(word, 0, strlen(word));
+		while (valid_inputs >= 4) { // loop fires if the amount of valid inputs equals or exceeds 4
+			if(getButtonPress()) { // returns true if the first button input is pressed
+				valid_inputs = 0; // resets valid inputs for so the user can input more
+				LED(1); // LED flashes green
+				memset(word, 0, strlen(word)); //resets the value of word back to "" using the memory adress
 			}
 
-			if(getButtonPressSecond()) {
-				LED(2);
+			if(getButtonPressSecond()) { // returns true if the second button input is pressed
+				LED(2); // LED flashes red
 				exit(1);
 			}
 		}
@@ -71,8 +71,8 @@ int main() {
 char* checkButton() {
 	char* temp;
 
-	if(pressedInitial) {
-		if (pressed < 250) {
+	if(pressedInitial) { // prevents the other branches from being checked unless the button has been pressed at least once
+		if (pressed < 250) { // checks to see if the time in ms that the button has been pressed for is less than 250 ms
 			printf("Button short\n");
 			temp = ".";
 			buzzer_signal(1);
