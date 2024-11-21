@@ -59,8 +59,7 @@ int main() {
 			if(getButtonPressSecond()) { // returns true if the second button input is pressed
 				LED(3); // LED flashes red
 				playExitApple();
-				//exit(1);
-				system("sudo shutdown -h now");
+				exit(1);
 			}
 		}
 	}
