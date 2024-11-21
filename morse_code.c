@@ -85,7 +85,6 @@ char* checkButton() {
 		
 		else {
 			temp = ","; // returns a , to be processed by the decoderwhich will fire an error code
-			buzzer_signal(3); // 
 		}
 	}
 
