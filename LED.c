@@ -2,9 +2,9 @@
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
 
-#define R 13 
-#define G 12 
-#define B 11 
+#define RED 13 
+#define GREEN 12 
+#define BLUE 11 
 
 
 #define BRIGHTNESS 50
